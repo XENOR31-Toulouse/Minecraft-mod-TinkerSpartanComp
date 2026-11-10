@@ -14,11 +14,11 @@ item.tconspartan.mace.desc=Une masse à ailettes particulièrement efficace cont
 item.tconspartan.quarterstaff.name=Bâton de combat
 item.tconspartan.quarterstaff.desc=Un bâton rapide à deux mains, avec un balayage à mi-dégâts.\nLe matériau de la tête coiffe le haut, celui de l'attache le bas.
 item.tconspartan.throwing_knife.name=Couteau de lancer
-item.tconspartan.throwing_knife.desc=Une pile de 16 couteaux de lancer. Maintenez clic droit puis relâchez pour en lancer un.\nLes couteaux ramassés retournent dans leur pile.
+item.tconspartan.throwing_knife.desc=Une pile de couteaux de lancer : leur nombre dépend des matériaux (durabilité de la tête), comme les flèches Tinkers.\nMaintenez clic droit puis relâchez pour en lancer un. Les couteaux ramassés retournent dans une pile identique.
 item.tconspartan.throwing_axe.name=Hache de lancer
-item.tconspartan.throwing_axe.desc=Une pile de 8 haches de lancer. Maintenez clic droit puis relâchez pour en lancer une.\nLes haches ramassées retournent dans leur pile.
+item.tconspartan.throwing_axe.desc=Une pile de haches de lancer : leur nombre dépend des matériaux, comme les flèches Tinkers.\nMaintenez clic droit puis relâchez pour en lancer une. Les haches ramassées retournent dans une pile identique.
 item.tconspartan.javelin.name=Javelot
-item.tconspartan.javelin.desc=Un lot de 4 javelots aux lourds dégâts en lancer.\nLes javelots ramassés retournent dans leur lot.
+item.tconspartan.javelin.desc=Un lot de javelots aux lourds dégâts en lancer : leur nombre dépend des matériaux.\nLes javelots ramassés retournent dans un lot identique.
 item.tconspartan.boomerang.name=Boomerang
 item.tconspartan.boomerang.desc=Maintenez clic droit puis relâchez pour le lancer : il revient après avoir touché quelque chose.
 
@@ -51,4 +51,3 @@ entity.tconspartan.thrown_boomerang.name=Boomerang
 
 # Infobulle
 tooltip.tconspartan.properties=Propriétés Spartan :
-tooltip.tconspartan.ammo=Munitions : %s / %s

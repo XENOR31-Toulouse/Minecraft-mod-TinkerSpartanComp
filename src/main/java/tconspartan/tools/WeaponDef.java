@@ -33,7 +33,7 @@ public final class WeaponDef {
     float durabilityModifier = 1f;
     float damageCutoff = 15f;
     ThrowType throwType = ThrowType.NONE;
-    int maxAmmo = 1;
+    int durabilityPerAmmo;
     boolean blocking;
     boolean versatile;
     WeaponProperty[] properties = new WeaponProperty[0];
@@ -93,9 +93,12 @@ public final class WeaponDef {
         return this;
     }
 
-    /** Arme de lancer en pile : nombre de projectiles par outil fabriqué (voir throwing.Ammo). */
-    WeaponDef ammo(int max) {
-        this.maxAmmo = max;
+    /**
+     * Arme de lancer à munitions, comme les flèches Tinkers : nombre de projectiles = durabilité / cette valeur
+     * (voir throwing.Ammo). La durabilité dépend des matériaux, donc le nombre de projectiles aussi.
+     */
+    WeaponDef ammo(int durabilityPerAmmo) {
+        this.durabilityPerAmmo = durabilityPerAmmo;
         return this;
     }
 

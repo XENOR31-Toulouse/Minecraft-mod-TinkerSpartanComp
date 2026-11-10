@@ -72,7 +72,7 @@ public final class ThrownTools {
     }
 
     /**
-     * Ramassage : le projectile retourne dans sa pile d'origine (munitions), sinon il devient un objet à part.
+     * Ramassage : un projectile à munitions retourne dans une pile identique, sinon il devient un objet à part.
      * Remplace EntityThrownWeapon#attemptCatch, qui ne sait fusionner que les armes de lancer de Spartan.
      */
     static boolean catchTool(EntityThrownWeapon projectile, EntityPlayer player) {
@@ -83,11 +83,9 @@ public final class ThrownTools {
                 || (projectile.pickupStatus == EntityArrow.PickupStatus.CREATIVE_ONLY && player.capabilities.isCreativeMode);
         if (projectile.pickupStatus == EntityArrow.PickupStatus.ALLOWED) {
             ItemStack stack = projectile.getWeaponStack().copy();
-            caught = Ammo.returnToStack(player, stack);
-            if (!caught) {
-                Ammo.clearThrowMarker(stack);
-                caught = player.inventory.addItemStackToInventory(stack);
-            }
+            // Armes à munitions : retour dans une pile identique (comme les flèches Tinkers), sinon nouvelle pile.
+            caught = (Ammo.usesAmmo(stack) && Ammo.returnToStack(player, stack))
+                    || player.inventory.addItemStackToInventory(stack);
         }
         if (caught) {
             player.onItemPickup(projectile, 1);

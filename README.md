@@ -2,6 +2,10 @@
 
 An addon that links **Tinkers' Construct** and **Spartan Weaponry**.
 
+Built and tested against **[Tinkers' Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)**
+(the maintained 1.12.2 fork of Tinkers' Construct: same mod id `tconstruct`, same API), with Mantle and
+Spartan Weaponry 1.6.1. The API it uses is the same in the original Tinkers' Construct 2.13.
+
 ## Weapons: built only from existing Tinkers parts
 
 The Tool Station matches parts **in slot order** and builds the first tool that fits, so every combination
@@ -39,10 +43,14 @@ Longsword and rapier are left out: Tinkers already has them. So are bows and cro
 - **Throwing** (hold right-click, release): the projectiles subclass Spartan's (`throwing/ThrownTools`),
   reusing its flight, rendering, pickup and boomerang return. On impact, the Tinkers logic applies (traits,
   durability: the weapon becomes "broken" instead of disappearing), plus Spartan's bonuses.
-- **Ammo** (`throwing/Ammo`), as in Spartan: a newly built tool holds **16 throwing knives**, **8 throwing axes**
-  or **4 javelins** (the count shows in the name: "Iron Throwing Knife ×12"). Each throw uses one; a picked-up
-  projectile goes back into **its** stack (identified by a UUID) and passes on the wear it took. If that wear
-  exceeds the stack's remaining durability, only that projectile is lost, not the whole stack.
+- **Ammo** (`throwing/Ammo`), computed **like Tinkers arrows and shuriken** (`ProjectileCore`): the
+  tool's durability is the ammo pool, and count = durability / cost per projectile (12 for the knife,
+  26 for the axe, 58 for the javelin). Since durability comes from the parts' materials (head, handle),
+  so does the projectile count: **iron → 15 knives / 8 axes / 4 javelins**, flint on wood → 11 knives,
+  cobalt → 53 knives. The count shows in the name ("Iron Throwing Knife ×12"), the tooltip and the
+  durability bar. Each throw uses one; at 0 the tool stays in the inventory as "empty". A picked-up
+  projectile gives its ammo back to an **identical stack** (same materials and modifiers, as with Tinkers
+  arrows). Each impact wears the projectile itself: after enough hits, it is lost.
 
 ## Smeltery
 - Spartan metal weapons melt down; the amount of metal comes from their crafting recipe.

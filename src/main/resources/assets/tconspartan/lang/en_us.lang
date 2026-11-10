@@ -14,11 +14,11 @@ item.tconspartan.mace.desc=A flanged club that is especially effective against t
 item.tconspartan.quarterstaff.name=Quarterstaff
 item.tconspartan.quarterstaff.desc=A fast two-handed staff with a half-damage sweep.\nThe head material caps the top end, the binding the bottom end.
 item.tconspartan.throwing_knife.name=Throwing Knife
-item.tconspartan.throwing_knife.desc=A stack of 16 throwing knives. Hold right-click and release to throw one.\nPicked-up knives go back into their stack.
+item.tconspartan.throwing_knife.desc=A stack of throwing knives: the count depends on the materials (head durability), like Tinkers arrows.\nHold right-click and release to throw one. Picked-up knives return to an identical stack.
 item.tconspartan.throwing_axe.name=Throwing Axe
-item.tconspartan.throwing_axe.desc=A stack of 8 throwing axes. Hold right-click and release to throw one.\nPicked-up axes go back into their stack.
+item.tconspartan.throwing_axe.desc=A stack of throwing axes: the count depends on the materials, like Tinkers arrows.\nHold right-click and release to throw one. Picked-up axes return to an identical stack.
 item.tconspartan.javelin.name=Javelin
-item.tconspartan.javelin.desc=A bundle of 4 javelins dealing heavy damage when thrown.\nPicked-up javelins go back into their bundle.
+item.tconspartan.javelin.desc=A bundle of javelins dealing heavy damage when thrown: the count depends on the materials.\nPicked-up javelins return to an identical bundle.
 item.tconspartan.boomerang.name=Boomerang
 item.tconspartan.boomerang.desc=Hold right-click and release to throw it: it comes back to you after hitting something.
 
@@ -51,4 +51,3 @@ entity.tconspartan.thrown_boomerang.name=Boomerang
 
 # Tooltip
 tooltip.tconspartan.properties=Spartan properties:
-tooltip.tconspartan.ammo=Ammo: %s / %s

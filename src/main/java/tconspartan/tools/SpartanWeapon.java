@@ -44,13 +44,14 @@ public enum SpartanWeapon {
             .stats(0.5f, 2.0, 1.2f, 15f)
             .props(TWO_HANDED_1, SWEEP_DAMAGE_HALF).guard(-10, 99, 0)),
     THROWING_KNIFE(WeaponDef.of("throwing_knife").handle(ROD).head(KNIFE_BLADE)
-            .stats(0.3f, 2.5, 0.8f, 15f).attackBonus(0.5f).throwing(ThrowType.KNIFE).ammo(16)
+            // Munitions façon flèches Tinkers : durabilité / coût. Fer (233 x modif.) -> 15 couteaux, 8 haches, 4 javelots.
+            .stats(0.3f, 2.5, 0.8f, 15f).attackBonus(0.5f).throwing(ThrowType.KNIFE).ammo(12)
             .props(THROWABLE, EXTRA_DAMAGE_2_THROWN)),
     THROWING_AXE(WeaponDef.of("throwing_axe").handle(ROD).head(AXE_HEAD)
-            .stats(0.6f, 0.9, 0.9f, 15f).throwing(ThrowType.AXE).ammo(8)
+            .stats(0.6f, 0.9, 0.9f, 15f).throwing(ThrowType.AXE).ammo(26)
             .props(THROWABLE, EXTRA_DAMAGE_2_THROWN)),
     JAVELIN(WeaponDef.of("javelin").handle(TOUGH_ROD).head(ARROW_HEAD)
-            .stats(0.3f, 1.2, 1.0f, 15f).throwing(ThrowType.JAVELIN).ammo(4)
+            .stats(0.3f, 1.2, 1.0f, 15f).throwing(ThrowType.JAVELIN).ammo(58)
             .props(THROWABLE, EXTRA_DAMAGE_3_THROWN)),
     BOOMERANG(WeaponDef.of("boomerang").handle(ROD).head(KAMA_HEAD)
             .stats(1.0f, 1.4, 1.0f, 15f).throwing(ThrowType.BOOMERANG)
@@ -121,9 +122,9 @@ public enum SpartanWeapon {
         return def.throwType;
     }
 
-    /** Projectiles par pile (1 = pas de munitions). */
-    public int maxAmmo() {
-        return def.maxAmmo;
+    /** Durabilité consommée par projectile (0 = arme lancée en un seul exemplaire, sans munitions). */
+    public int durabilityPerAmmo() {
+        return def.durabilityPerAmmo;
     }
 
     public WeaponProperty[] properties() {

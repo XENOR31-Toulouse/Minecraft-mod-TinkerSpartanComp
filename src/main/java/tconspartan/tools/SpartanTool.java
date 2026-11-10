@@ -42,6 +42,7 @@ import slimeknights.tconstruct.library.tinkering.PartMaterialType;
 import slimeknights.tconstruct.library.tools.SwordCore;
 import slimeknights.tconstruct.library.tools.ToolNBT;
 import slimeknights.tconstruct.library.utils.ToolHelper;
+import slimeknights.tconstruct.library.utils.TooltipBuilder;
 import tconspartan.throwing.Ammo;
 import tconspartan.throwing.ThrowType;
 
@@ -305,11 +306,11 @@ public class SpartanTool extends SwordCore implements IWeaponPropertyContainer<S
         }
         float chargePerc = (float) charge / type.chargeTicks;
 
-        int ammo = Ammo.get(stack);
+        boolean ammoWeapon = Ammo.usesAmmo(stack);
         if (!world.isRemote) {
             EntityThrownWeapon thrown = type.create(world, player);
-            // Le projectile emporte une seule munition, liée à cette pile pour y revenir au ramassage.
-            thrown.setWeapon(Ammo.splitForThrow(stack));
+            // Arme à munitions : le projectile emporte une copie à une seule munition (comme les flèches Tinkers).
+            thrown.setWeapon(ammoWeapon ? Ammo.forProjectile(stack) : stack);
             thrown.shoot(player, player.rotationPitch, player.rotationYaw, 0f,
                     type.velocity * (chargePerc * 0.9f + 0.1f), 0.5f);
             float multiplier = (type.damageMultiplier - 1f) * chargePerc + 1f;
@@ -326,8 +327,8 @@ public class SpartanTool extends SwordCore implements IWeaponPropertyContainer<S
                     SoundCategory.PLAYERS, 0.5f, 0.4f / (itemRand.nextFloat() * 0.4f + 0.8f));
         }
         if (!player.capabilities.isCreativeMode) {
-            if (ammo > 1) {
-                Ammo.set(stack, ammo - 1);
+            if (ammoWeapon) {
+                Ammo.use(stack, player); // à 0, l'outil reste dans l'inventaire, « vide »
             } else {
                 player.inventory.deleteStack(stack);
             }
@@ -349,20 +350,61 @@ public class SpartanTool extends SwordCore implements IWeaponPropertyContainer<S
 
     // ------------------------------------------------------------------ tooltip
 
-    /** Les armes de lancer en pile affichent leur nombre de munitions : "Couteau de lancer en fer ×12". */
+    // ------------------------------------------------------------------ munitions (affichage façon flèches Tinkers)
+
+    /** Les armes à munitions affichent leur nombre de projectiles : "Couteau de lancer en fer ×12". */
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
         String name = super.getItemStackDisplayName(stack);
-        return weapon.maxAmmo() > 1 ? name + " ×" + Ammo.get(stack) : name;
+        return Ammo.usesAmmo(stack) ? name + " ×" + Ammo.get(stack) : name;
+    }
+
+    /** Barre de durabilité = munitions restantes, comme ProjectileCore. */
+    @Override
+    public double getDurabilityForDisplay(ItemStack stack) {
+        if (!Ammo.usesAmmo(stack)) {
+            return super.getDurabilityForDisplay(stack);
+        }
+        int max = Ammo.max(stack);
+        return (double) (max - Ammo.get(stack)) / max;
+    }
+
+    @Override
+    public boolean showDurabilityBar(ItemStack stack) {
+        if (!Ammo.usesAmmo(stack)) {
+            return super.showDurabilityBar(stack);
+        }
+        return Ammo.get(stack) != Ammo.max(stack) && super.showDurabilityBar(stack);
+    }
+
+    /** Infobulle Tinkers : "Munitions : x/y" à la place de la durabilité. */
+    @Override
+    public List<String> getInformation(ItemStack stack, boolean detailed) {
+        if (!Ammo.usesAmmo(stack)) {
+            return super.getInformation(stack, detailed);
+        }
+        TooltipBuilder info = new TooltipBuilder(stack);
+        info.add(TooltipBuilder.formatAmmo(Ammo.get(stack), Ammo.max(stack)));
+        info.addAttack();
+        if (ToolHelper.getFreeModifiers(stack) > 0) {
+            info.addFreeModifiers();
+        }
+        if (detailed) {
+            info.addModifierInfo();
+        }
+        return info.getTooltip();
+    }
+
+    /** Une arme à munitions à 0 est « vide » (comme les flèches), pas « cassée ». */
+    @Override
+    protected String getBrokenTooltip(ItemStack stack) {
+        return Ammo.usesAmmo(stack) ? Util.translate("tooltip.tool.empty") : super.getBrokenTooltip(stack);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void getTooltip(ItemStack stack, List<String> tooltips) {
         super.getTooltip(stack, tooltips);
-        if (weapon.maxAmmo() > 1) {
-            tooltips.add(I18n.format("tooltip.tconspartan.ammo", Ammo.get(stack), weapon.maxAmmo()));
-        }
         if (!properties.isEmpty()) {
             boolean shift = Util.isShiftKeyDown();
             tooltips.add(TextFormatting.GOLD + I18n.format("tooltip.tconspartan.properties"));

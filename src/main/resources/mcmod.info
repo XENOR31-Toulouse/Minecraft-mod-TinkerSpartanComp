@@ -6,7 +6,7 @@
     "version": "${mod_version}",
     "mcversion": "1.12.2",
     "authorList": [],
-    "credits": "Tinkers' Construct by the SlimeKnights, Spartan Weaponry by ObliviousSpartan. Weapon textures are taken at runtime from Spartan Weaponry.",
+    "credits": "Tinkers' Construct by the SlimeKnights (built against Tinkers' Antique by the Elite Modding Team), Spartan Weaponry by ObliviousSpartan. Weapon textures are taken at runtime from Spartan Weaponry.",
     "dependencies": ["mantle", "tconstruct", "spartanweaponry"],
     "requiredMods": ["mantle", "tconstruct", "spartanweaponry"]
   }
