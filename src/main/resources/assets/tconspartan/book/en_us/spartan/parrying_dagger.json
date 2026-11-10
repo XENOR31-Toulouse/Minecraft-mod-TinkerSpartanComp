@@ -2,11 +2,11 @@
   "tool": "parrying_dagger",
   "text": [
     {
-      "text": "Built for defence rather than offence. Hold right-click to raise it: melee blows are turned aside and only chip at its durability."
+      "text": "Built for defence. Hold right-click to raise it and turn aside melee blows."
     }
   ],
   "properties": [
-    "Parries melee attacks",
+    "Parries melee",
     "Fast",
     "Tool Station"
   ]

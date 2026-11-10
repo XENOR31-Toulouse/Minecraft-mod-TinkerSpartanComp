@@ -2,11 +2,11 @@
   "tool": "mace",
   "text": [
     {
-      "text": "De lourdes ailettes concentrent chaque coup. Zombies, squelettes et autres morts-vivants subissent moitié plus de dégâts."
+      "text": "De lourdes ailettes concentrent chaque coup. Les morts-vivants subissent moitié plus de dégâts."
     }
   ],
   "properties": [
-    "+50 % de dégâts aux morts-vivants",
+    "+50 % morts-vivants",
     "Tool Station"
   ]
 }

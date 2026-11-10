@@ -2,11 +2,11 @@
   "tool": "quarterstaff",
   "text": [
     {
-      "text": "Rapide et polyvalent : chaque extrémité peut être coiffée d'un matériau différent. Son balayage inflige la moitié des dégâts autour de vous."
+      "text": "Rapide et polyvalent : chaque bout a son matériau, et son balayage frappe tout autour."
     }
   ],
   "properties": [
-    "Balayage : 50 % des dégâts",
+    "Balayage : 50 %",
     "À deux mains (I)",
     "Rapide",
     "Tool Station"

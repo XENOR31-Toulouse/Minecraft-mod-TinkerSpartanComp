@@ -297,11 +297,20 @@ final class ModifierArt {
                 }
                 break;
             }
-            case "webbed": // résille de fils de soie d'araignée à la base de la lame
-                for (int p : sh.head) {
-                    if (sh.s(p) < 0.3 && (Math.floorMod(sh.t(p), 3 * sh.k) == 0
-                            || Math.floorMod(sh.x(p) + sh.y(p), 4 * sh.k) == 0)) {
-                        out.set(p, sh.lum(p) < 160 ? pal[3] : pal[0]);
+            case "webbed": // résille de fils à la base de la lame ; sur les têtes fines, fils qui pendent de la tête
+                if (!sh.smallHead()) {
+                    for (int p : sh.head) {
+                        if (sh.s(p) < 0.3 && (Math.floorMod(sh.t(p), 3 * sh.k) == 0
+                                || Math.floorMod(sh.x(p) + sh.y(p), 4 * sh.k) == 0)) {
+                            out.set(p, sh.lum(p) < 160 ? pal[3] : pal[0]);
+                        }
+                    }
+                }
+                // Fils de toile tendus depuis le contour de la tête (en diagonale, vers l'extérieur).
+                for (int p : spaced(sorted(sh.edge(false), sh), sh.smallHead() ? 2 : 3)) {
+                    int len = 2 + sh.k;
+                    for (int i = 1; i <= len; i++) {
+                        out.setIfEmpty(sh.x(p) + i, sh.y(p) + i, i == len ? pal[1] : pal[2]);
                     }
                 }
                 break;
@@ -541,7 +550,48 @@ final class ModifierArt {
                     return out;
                 }
             }
+            // Tête trop fine (pique, lance, javelot...) : on décore le collet, le haut du manche sous la tête.
+            List<Integer> collar = collar();
+            return collar.size() >= out.size() ? collar : out;
+        }
+
+        /** Collet : ligne centrale du haut du manche, juste sous la tête ou la garde. */
+        List<Integer> collar() {
+            List<Integer> out = new ArrayList<>();
+            if (handle.isEmpty()) {
+                return out;
+            }
+            Map<Integer, List<Integer>> byT = new HashMap<>();
+            int top = Integer.MIN_VALUE;
+            for (int p : handle) {
+                byT.computeIfAbsent(t(p), key -> new ArrayList<>()).add(p);
+                top = Math.max(top, t(p));
+            }
+            for (int t = top - 1; t > top - 1 - 5 * k; t--) {
+                List<Integer> row = byT.get(t);
+                if (row == null) {
+                    continue;
+                }
+                double mean = 0;
+                for (int p : row) {
+                    mean += u(p);
+                }
+                mean /= row.size();
+                int best = row.get(0);
+                for (int p : row) {
+                    if (Math.abs(u(p) - mean) < Math.abs(u(best) - mean)) {
+                        best = p;
+                    }
+                }
+                out.add(best);
+            }
+            out.sort(Comparator.comparingInt(this::t));
             return out;
+        }
+
+        /** Tête petite au regard de la résolution (armes d'hast fines). */
+        boolean smallHead() {
+            return head.size() < 8 * k * k;
         }
 
         /** Poignée : partie du manche juste sous la garde (ou la tête). */

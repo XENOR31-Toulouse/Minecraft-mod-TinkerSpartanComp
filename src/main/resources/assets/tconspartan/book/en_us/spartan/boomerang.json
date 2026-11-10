@@ -2,12 +2,12 @@
   "tool": "boomerang",
   "text": [
     {
-      "text": "Throw it at a target and catch it on the way back. The longer you charge, the further it flies before turning around."
+      "text": "Throw it and catch it on the way back. Charge longer to send it further."
     }
   ],
   "properties": [
     "Returns to the thrower",
-    "Charge to fly further",
+    "Charge: flies further",
     "Tool Station"
   ]
 }

@@ -19,7 +19,7 @@ public enum ThrowType {
     KNIFE(2.1f, 2f, 5, ThrownTools.Knife::new),
     AXE(1.75f, 2f, 8, ThrownTools.Axe::new),
     JAVELIN(2.4f, 3f, 10, ThrownTools.Javelin::new),
-    BOOMERANG(2f, 1f, 5, ThrownTools.Boomerang::new);
+    BOOMERANG(2f, 1.7f, 5, ThrownTools.Boomerang::new);
 
     /** Vitesse du projectile à pleine charge. */
     public final float velocity;

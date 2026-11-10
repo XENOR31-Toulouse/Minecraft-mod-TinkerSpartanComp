@@ -1,14 +1,9 @@
 package tconspartan.client;
 
-import net.minecraft.client.gui.GuiMainMenu;
-import net.minecraftforge.client.event.GuiOpenEvent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import slimeknights.mantle.client.book.data.BookData;
 import slimeknights.mantle.client.book.data.PageData;
-import slimeknights.mantle.client.book.data.SectionData;
 import slimeknights.mantle.client.book.repository.FileRepository;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import slimeknights.tconstruct.library.book.TinkerBook;
@@ -34,38 +29,6 @@ public final class SpartanBook {
     public static void register() {
         TinkerBook.INSTANCE.addRepository(new FileRepository(TConSpartan.MODID + ":book"));
         TinkerBook.INSTANCE.addTransformer(new Contents());
-        if (Boolean.getBoolean("tconspartan.checkBook")) {
-            MinecraftForge.EVENT_BUS.register(new SelfCheck());
-        }
-    }
-
-    /**
-     * Option de développement ({@code ./gradlew runClient -PcheckBook}) : charge le livre à l'arrivée sur le menu
-     * principal et écrit dans le journal les pages de la section, ou les erreurs de chargement.
-     */
-    public static final class SelfCheck {
-        private boolean done;
-
-        @SubscribeEvent
-        public void onGui(GuiOpenEvent event) {
-            if (done || !(event.getGui() instanceof GuiMainMenu)) {
-                return;
-            }
-            done = true;
-            // Noms traduits (une clé brute ici = fichiers de langue non chargés, cf. pack.mcmeta)
-            TConSpartan.LOG.info("[book] weapon name: '{}'", tconspartan.tools.SpartanWeapon.KATANA.tool.getLocalizedName());
-            BookData book = TinkerBook.INSTANCE;
-            book.load();
-            for (SectionData section : book.sections) {
-                boolean ours = "spartan".equals(section.name);
-                for (PageData page : section.pages) {
-                    String type = page.content == null ? "null" : page.content.getClass().getSimpleName();
-                    if (ours || type.contains("Error")) {
-                        TConSpartan.LOG.info("[book] {} / {} : {}", section.name, page.getTitle(), type);
-                    }
-                }
-            }
-        }
     }
 
     /** Table des matières de la section : pages de texte par titre, armes par nom traduit. */

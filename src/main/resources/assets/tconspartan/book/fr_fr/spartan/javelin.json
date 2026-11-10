@@ -2,12 +2,12 @@
   "tool": "javelin",
   "text": [
     {
-      "text": "Chargez complètement le lancer pour envoyer le javelot loin et droit : il inflige le triple de dégâts. Moins nombreux, mais dévastateurs."
+      "text": "Chargez le lancer : le javelot vole loin et inflige le triple de dégâts. Peu nombreux, mais dévastateurs."
     }
   ],
   "properties": [
-    "Lancé : dégâts triplés",
-    "Munitions selon matériaux",
+    "Lancé : dégâts x3",
+    "Munitions : matériaux",
     "Tool Station"
   ]
 }

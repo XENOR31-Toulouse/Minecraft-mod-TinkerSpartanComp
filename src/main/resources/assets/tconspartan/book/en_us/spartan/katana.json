@@ -2,12 +2,12 @@
   "tool": "katana",
   "text": [
     {
-      "text": "Elegant and deadly. Its sweep cuts through groups, and enemies without a chestplate take double damage. Keep the other hand free."
+      "text": "Elegant and deadly: its sweep cuts through groups. Keep the other hand free."
     }
   ],
   "properties": [
     "Sweep attack",
-    "Double damage without chestplate",
+    "x2 vs no chestplate",
     "Two-handed (I)",
     "Tool Station"
   ]

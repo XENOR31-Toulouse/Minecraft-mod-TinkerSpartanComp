@@ -2,12 +2,12 @@
   "tool": "katana",
   "text": [
     {
-      "text": "Élégant et mortel. Son balayage traverse les groupes, et les ennemis sans plastron subissent le double de dégâts. Gardez l'autre main libre."
+      "text": "Élégant et mortel : son balayage traverse les groupes. Gardez l'autre main libre."
     }
   ],
   "properties": [
     "Attaque en balayage",
-    "Dégâts doublés sans plastron",
+    "x2 sans plastron",
     "À deux mains (I)",
     "Tool Station"
   ]

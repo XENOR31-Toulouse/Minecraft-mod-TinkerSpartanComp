@@ -28,9 +28,9 @@ minecraft {
     if (project.hasProperty('dumpTextures')) {
         extraRunJvmArguments.add('-Dtconspartan.dumpTextures=true')
     }
-    // ./gradlew runClient -PcheckBook : vérifie le chargement des pages du livre Tinkers (voir le journal)
-    if (project.hasProperty('checkBook')) {
-        extraRunJvmArguments.add('-Dtconspartan.checkBook=true')
+    // ./gradlew runClient -PdevChecks : vérifications automatiques (livre, munitions, stats ; journal, lignes [check])
+    if (project.hasProperty('devChecks')) {
+        extraRunJvmArguments.add('-Dtconspartan.devChecks=true')
     }
 }
 
@@ -56,6 +56,11 @@ def copySpartanToMods = tasks.register('copySpartanToMods', Copy) {
 }
 ['runClient', 'runServer'].each { name ->
     tasks.named(name) { dependsOn copySpartanToMods }
+}
+
+// ./gradlew runClient -Pconnect : le client rejoint directement le serveur local (./gradlew runServer)
+if (project.hasProperty('connect')) {
+    tasks.named('runClient') { args('--server', 'localhost', '--port', '25565') }
 }
 
 tasks.withType(JavaCompile).configureEach {

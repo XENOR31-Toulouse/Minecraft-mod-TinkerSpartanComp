@@ -2,12 +2,12 @@
   "tool": "throwing_axe",
   "text": [
     {
-      "text": "Plus lentes à lancer que les couteaux, mais chaque hache frappe fort et inflige le double de dégâts. Ramassez-les pour recharger la pile."
+      "text": "Plus lentes que les couteaux, mais chaque hache frappe fort : double dégâts en lancer."
     }
   ],
   "properties": [
-    "Lancée : dégâts doublés",
-    "Munitions selon matériaux",
+    "Lancée : dégâts x2",
+    "Munitions : matériaux",
     "Tool Station"
   ]
 }

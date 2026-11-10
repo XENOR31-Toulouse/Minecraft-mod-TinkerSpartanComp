@@ -2,11 +2,11 @@
   "tool": "dagger",
   "text": [
     {
-      "text": "La compagne des assassins. Légère et rapide, elle inflige le triple de dégâts quand on frappe un ennemi dans le dos, et se lance au besoin."
+      "text": "La compagne des assassins : triple dégâts dans le dos, et elle se lance au besoin."
     }
   ],
   "properties": [
-    "Dans le dos : dégâts triplés",
+    "x3 dans le dos",
     "Se lance",
     "Rapide",
     "Tool Station"

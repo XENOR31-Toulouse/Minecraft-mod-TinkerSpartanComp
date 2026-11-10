@@ -2,11 +2,11 @@
   "tool": "dagger",
   "text": [
     {
-      "text": "The assassin's companion. Light and fast, it deals triple damage when you strike an enemy from behind, and can be thrown in a pinch."
+      "text": "The assassin's companion: triple damage from behind, and it can be thrown in a pinch."
     }
   ],
   "properties": [
-    "Backstab: triple damage",
+    "x3 from behind",
     "Throwable",
     "Fast",
     "Tool Station"

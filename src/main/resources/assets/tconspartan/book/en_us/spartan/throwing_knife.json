@@ -2,11 +2,11 @@
   "tool": "throwing_knife",
   "text": [
     {
-      "text": "Thrown knives deal double damage. Like Tinkers arrows, the number of knives comes from the durability of the materials: pick them back up to refill the stack."
+      "text": "Thrown knives deal double damage. Their number comes from the materials, like Tinkers arrows."
     }
   ],
   "properties": [
-    "Thrown: double damage",
+    "Thrown: x2 damage",
     "Ammo from materials",
     "Fast",
     "Tool Station"

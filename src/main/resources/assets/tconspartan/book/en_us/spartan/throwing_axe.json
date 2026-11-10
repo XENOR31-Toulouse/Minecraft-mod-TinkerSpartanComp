@@ -2,11 +2,11 @@
   "tool": "throwing_axe",
   "text": [
     {
-      "text": "Slower to throw than knives, but each axe hits hard and deals double damage. Pick them back up to refill the stack."
+      "text": "Slower than knives, but each axe hits hard and deals double damage when thrown."
     }
   ],
   "properties": [
-    "Thrown: double damage",
+    "Thrown: x2 damage",
     "Ammo from materials",
     "Tool Station"
   ]

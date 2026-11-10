@@ -54,7 +54,8 @@ public enum SpartanWeapon {
             .stats(0.3f, 1.2, 1.0f, 15f).throwing(ThrowType.JAVELIN).ammo(58)
             .props(THROWABLE, EXTRA_DAMAGE_3_THROWN)),
     BOOMERANG(WeaponDef.of("boomerang").handle(ROD).head(KAMA_HEAD)
-            .stats(1.0f, 1.4, 1.0f, 15f).throwing(ThrowType.BOOMERANG)
+            // Faible en mêlée (comme dans Spartan) : ses dégâts viennent du lancer (x1.7 -> ~6 en fer).
+            .stats(0.5f, 1.4, 1.0f, 15f).throwing(ThrowType.BOOMERANG)
             .props(THROWABLE)),
 
     // ---------------------------------------------------------------- Tool Forge

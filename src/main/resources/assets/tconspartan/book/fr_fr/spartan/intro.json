@@ -11,14 +11,7 @@
       "text": "\n"
     },
     {
-      "text": "Chaque arme se fabrique avec des "
-    },
-    {
-      "text": "pièces Tinkers existantes",
-      "color": "dark_blue"
-    },
-    {
-      "text": " à la Tool Station ou à la Tool Forge : choisissez l'arme, puis placez les pièces indiquées."
+      "text": "Chaque arme se fabrique avec des pièces Tinkers existantes à la Tool Station ou à la Tool Forge : choisissez l'arme, puis placez les pièces indiquées."
     },
     {
       "text": "\n"
@@ -27,14 +20,7 @@
       "text": "\n"
     },
     {
-      "text": "Matériaux, traits et modificateurs fonctionnent comme sur tout outil Tinkers. En plus, chaque arme garde ses "
-    },
-    {
-      "text": "propriétés Spartan",
-      "color": "dark_blue"
-    },
-    {
-      "text": " : portée, balayage, deux mains..."
+      "text": "Matériaux, traits et modificateurs fonctionnent comme sur tout outil Tinkers. En plus, chaque arme garde ses propriétés Spartan : portée, balayage, deux mains..."
     }
   ]
 }

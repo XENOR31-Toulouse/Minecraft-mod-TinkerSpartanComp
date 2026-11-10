@@ -2,12 +2,12 @@
   "tool": "saber",
   "text": [
     {
-      "text": "The duellist's choice: a sweeping blade that also protects you. While held, it absorbs a quarter of incoming melee damage."
+      "text": "The duellist's choice: a sweeping blade that also absorbs part of the blows you take."
     }
   ],
   "properties": [
-    "Absorbs 25% melee damage",
-    "Double damage without chestplate",
+    "Absorbs 25% damage",
+    "x2 vs no chestplate",
     "Sweep attack",
     "Tool Station"
   ]

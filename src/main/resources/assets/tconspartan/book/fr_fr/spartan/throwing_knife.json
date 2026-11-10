@@ -2,12 +2,12 @@
   "tool": "throwing_knife",
   "text": [
     {
-      "text": "Lancés, les couteaux infligent le double de dégâts. Comme les flèches Tinkers, leur nombre vient de la durabilité des matériaux : ramassez-les pour recharger la pile."
+      "text": "Lancés, ils infligent le double de dégâts. Leur nombre dépend des matériaux, comme les flèches."
     }
   ],
   "properties": [
-    "Lancé : dégâts doublés",
-    "Munitions selon matériaux",
+    "Lancé : dégâts x2",
+    "Munitions : matériaux",
     "Rapide",
     "Tool Station"
   ]

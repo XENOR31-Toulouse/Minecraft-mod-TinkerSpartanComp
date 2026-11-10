@@ -60,8 +60,7 @@ A **"Spartan Arsenal"** section is added to the Tinkers book (English and French
 - one page per weapon: the tool and its parts laid out as in the Tool Station, a description and its properties.
 
 The files live in `assets/tconspartan/book/`: `index.json`, `sections/spartan.json`, and texts under `<lang>/spartan/`.
-`client/SpartanBook` registers them with Tinkers and builds the table of contents. To check that every page
-loads without opening the book: `./gradlew runClient -PcheckBook` (results in the log, lines `[book]`).
+`client/SpartanBook` registers them with Tinkers and builds the table of contents.
 
 **Names, descriptions and book texts** all come from one table, `scripts/gen_content.py` (English + French):
 edit it, then run `python scripts/gen_content.py .` to regenerate `lang/*.lang` and the book pages.
@@ -94,7 +93,9 @@ edit it, then run `python scripts/gen_content.py .` to regenerate `lang/*.lang` 
   | Around | glowing (sparkles), bane of arthropods (venom drops) |
 
   Rules: never paint outside the silhouette, hand-picked 4-tone palettes, shading that follows the original
-  pixel's brightness, gem sizes that scale with resolution, 1-pixel lines.
+  pixel's brightness, gem sizes that scale with resolution, 1-pixel lines. On heads too thin for a fuller
+  (pike, lance, javelin), the fuller effects go on the **collar** (top of the shaft), and webbed becomes
+  threads hanging from the head.
 
 ### Hand-drawn textures (for artists)
 - Any PNG at `assets/tconspartan/textures/items/<weapon>/<layer>.png` (in the mod **or in a resource pack**)
@@ -113,6 +114,16 @@ Requirements: JDK 8 (to compile). Gradle downloads a JDK 25 for itself (RetroFut
 ./gradlew runClient              # copies Spartan into run/mods (coremod), then launches the game
 ./gradlew build                  # -> build/libs/tconspartan-<version>.jar
 ```
+
+### Testing without playing
+| Option | Effect |
+|---|---|
+| `./gradlew runServer` | Dedicated server (`run/eula.txt` must contain `eula=true`). |
+| `./gradlew runClient -Pconnect` | The client joins the local server directly (multiplayer test). |
+| `./gradlew runClient -PdevChecks` | Self-test, results in the log (`[check]` lines): translations, book, throwing-weapon ammo by material (PASS/FAIL), stats table compared with Spartan and Tinkers, and once in a world, screenshots of every double page of the book section (`run/screenshots/tconspartan-book-*.png`). |
+| `./gradlew runClient -PdumpTextures` | Writes every generated texture to `run/tconspartan-textures/`. |
+
+The options combine, e.g. `./gradlew runClient -PdevChecks -Pconnect -PdumpTextures` with `runServer` running.
 
 Adding a weapon: one line in `SpartanWeapon.java` (unique part combination), its entry in
 `scripts/gen_models.py`, then `python scripts/gen_models.py <Spartan jar>` and the lang entries.

@@ -2,7 +2,7 @@
   "tool": "quarterstaff",
   "text": [
     {
-      "text": "Quick and versatile: each end can be capped with a different material. Its sweep deals half damage to everything nearby."
+      "text": "Quick and versatile: each end is capped with its own material, and its sweep hits all around."
     }
   ],
   "properties": [

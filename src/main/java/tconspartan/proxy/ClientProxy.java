@@ -17,6 +17,7 @@ import slimeknights.tconstruct.library.TinkerRegistryClient;
 import slimeknights.tconstruct.library.client.ToolBuildGuiInfo;
 import slimeknights.tconstruct.library.client.model.ModifierModelLoader;
 import tconspartan.TConSpartan;
+import tconspartan.client.DevChecks;
 import tconspartan.client.SpartanBook;
 import tconspartan.client.SpartanTextures;
 import tconspartan.throwing.ThrownTools;
@@ -53,6 +54,8 @@ public class ClientProxy extends CommonProxy {
         }
         // Section « Arsenal spartiate » dans le livre de Tinkers
         SpartanBook.register();
+        // ./gradlew runClient -PdevChecks : vérifications automatiques (journal, lignes [check])
+        DevChecks.registerIfEnabled();
     }
 
     @SubscribeEvent
