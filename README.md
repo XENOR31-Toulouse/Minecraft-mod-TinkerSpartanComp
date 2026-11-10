@@ -64,15 +64,23 @@ Longsword and rapier are left out: Tinkers already has them. So are bows and cro
 - **guard/binding**: its own layer, coloured by its material. The pixels are chosen by the `guard(...)`,
   `plate(...)` and `handleBelow(...)` parameters in `SpartanWeapon`, in a frame where t = x - y runs along the
   weapon and u = x + y - (size - 1) is the offset from the axis;
-- **modifier overlays** (`client/OverlayTransfer`): the **hand-drawn art from Tinkers' Construct** is
-  transferred from the closest Tinkers tool (`look(...)` in `SpartanWeapon`: broadsword, rapier, hatchet,
-  hammer, pickaxe, scythe, kama). Two cases are detected automatically:
-  - *coating* (diamond, silk touch, beheading, fiery, reinforced...): the colours are learned by brightness
-    band on the Tinkers tool, then reapplied to the weapon's head over the same zone;
-  - *decorations* (haste gem, emerald, luck lapis, smite ring, cobwebs...): each group of pixels is moved
-    to the same relative spot on the matching part (handle, head, guard).
+- **modifier art** (`client/ModifierArt`): an original design, drawn from each weapon's **actual shape**
+  (the weapons differ in resolution: 16, 32 or 64 px, and in silhouette). The code finds the cutting edge,
+  the fuller, the tip, the guard, the pommel and the grip, and each modifier has its own spot, so several
+  combine cleanly:
 
-  If Tinkers has no art for a modifier, a dot in its colour is used as a fallback.
+  | Where | Modifiers |
+  |---|---|
+  | Cutting edge | diamond (set with diamond), sharpness (honed quartz edge), fiery (incandescent from base to tip), beheading (ender-tempered tip), fortify, fins |
+  | Fuller | haste (redstone rubies), smite (gilded fuller), necrotic (blood veins), shulking (pearls) |
+  | Guard | emerald (cut gem), soulbound (nether star) |
+  | Pommel | luck (lapis set in gold), blasting |
+  | Grip / handle | silk touch (silk-wrapped grip), knockback (brass rings) |
+  | Blade base | reinforced (obsidian plates), mending moss, webbed (thread mesh) |
+  | Around | glowing (sparkles), bane of arthropods (venom drops) |
+
+  Rules: never paint outside the silhouette, hand-picked 4-tone palettes, shading that follows the original
+  pixel's brightness, gem sizes that scale with resolution, 1-pixel lines.
 
 ### Hand-drawn textures (for artists)
 - Any PNG at `assets/tconspartan/textures/items/<weapon>/<layer>.png` (in the mod **or in a resource pack**)
