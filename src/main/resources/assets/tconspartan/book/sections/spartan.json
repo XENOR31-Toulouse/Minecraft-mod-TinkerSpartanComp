@@ -1,0 +1,127 @@
+[
+  {
+    "name": "spartan_intro",
+    "type": "text",
+    "data": "spartan/intro.json"
+  },
+  {
+    "name": "spartan_properties",
+    "type": "text",
+    "data": "spartan/properties.json"
+  },
+  {
+    "name": "hidden",
+    "type": "text",
+    "data": "spartan/properties2.json"
+  },
+  {
+    "name": "spartan_throwing",
+    "type": "text",
+    "data": "spartan/throwing.json"
+  },
+  {
+    "name": "spartan_smeltery",
+    "type": "text",
+    "data": "spartan/smeltery.json"
+  },
+  {
+    "name": "dagger",
+    "type": "tool",
+    "data": "spartan/dagger.json"
+  },
+  {
+    "name": "parrying_dagger",
+    "type": "tool",
+    "data": "spartan/parrying_dagger.json"
+  },
+  {
+    "name": "katana",
+    "type": "tool",
+    "data": "spartan/katana.json"
+  },
+  {
+    "name": "saber",
+    "type": "tool",
+    "data": "spartan/saber.json"
+  },
+  {
+    "name": "spear",
+    "type": "tool",
+    "data": "spartan/spear.json"
+  },
+  {
+    "name": "mace",
+    "type": "tool",
+    "data": "spartan/mace.json"
+  },
+  {
+    "name": "quarterstaff",
+    "type": "tool",
+    "data": "spartan/quarterstaff.json"
+  },
+  {
+    "name": "throwing_knife",
+    "type": "tool",
+    "data": "spartan/throwing_knife.json"
+  },
+  {
+    "name": "throwing_axe",
+    "type": "tool",
+    "data": "spartan/throwing_axe.json"
+  },
+  {
+    "name": "javelin",
+    "type": "tool",
+    "data": "spartan/javelin.json"
+  },
+  {
+    "name": "boomerang",
+    "type": "tool",
+    "data": "spartan/boomerang.json"
+  },
+  {
+    "name": "pike",
+    "type": "tool",
+    "data": "spartan/pike.json"
+  },
+  {
+    "name": "lance",
+    "type": "tool",
+    "data": "spartan/lance.json"
+  },
+  {
+    "name": "glaive",
+    "type": "tool",
+    "data": "spartan/glaive.json"
+  },
+  {
+    "name": "greatsword",
+    "type": "tool",
+    "data": "spartan/greatsword.json"
+  },
+  {
+    "name": "halberd",
+    "type": "tool",
+    "data": "spartan/halberd.json"
+  },
+  {
+    "name": "battle_axe",
+    "type": "tool",
+    "data": "spartan/battle_axe.json"
+  },
+  {
+    "name": "warhammer",
+    "type": "tool",
+    "data": "spartan/warhammer.json"
+  },
+  {
+    "name": "battle_hammer",
+    "type": "tool",
+    "data": "spartan/battle_hammer.json"
+  },
+  {
+    "name": "war_scythe",
+    "type": "tool",
+    "data": "spartan/war_scythe.json"
+  }
+]

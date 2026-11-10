@@ -1,0 +1,14 @@
+{
+  "tool": "greatsword",
+  "text": [
+    {
+      "text": "Slow, heavy and unstoppable. Every enemy caught in its sweep takes the full blow. Requires both hands."
+    }
+  ],
+  "properties": [
+    "Sweep: full damage",
+    "Reach: 6 blocks",
+    "Two-handed (II)",
+    "Tool Forge"
+  ]
+}

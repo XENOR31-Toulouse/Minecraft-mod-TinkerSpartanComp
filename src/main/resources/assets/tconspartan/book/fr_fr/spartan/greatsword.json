@@ -1,0 +1,14 @@
+{
+  "tool": "greatsword",
+  "text": [
+    {
+      "text": "Lent, lourd et implacable. Chaque ennemi pris dans son balayage encaisse le coup entier. Exige les deux mains."
+    }
+  ],
+  "properties": [
+    "Balayage : dégâts complets",
+    "Portée : 6 blocs",
+    "À deux mains (II)",
+    "Tool Forge"
+  ]
+}

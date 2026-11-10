@@ -1,0 +1,33 @@
+{
+  "title": "Smeltery",
+  "text": [
+    {
+      "text": "Spartan Weaponry's own metal weapons can be melted in the smeltery to recover their metal."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "The amount follows the crafting recipe, and "
+    },
+    {
+      "text": "worn weapons give back less",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": a half-broken iron sword returns about half of its iron."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "The Tinkers weapons of this arsenal work like any Tinkers tool: their parts can be cast and melted as usual."
+    }
+  ]
+}

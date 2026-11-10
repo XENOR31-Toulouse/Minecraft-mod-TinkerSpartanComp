@@ -1,0 +1,13 @@
+{
+  "tool": "warhammer",
+  "text": [
+    {
+      "text": "The answer to heavy armour: half of every blow goes straight through it. Wield it with both hands."
+    }
+  ],
+  "properties": [
+    "Ignores 50% armour",
+    "Two-handed (I)",
+    "Tool Forge"
+  ]
+}

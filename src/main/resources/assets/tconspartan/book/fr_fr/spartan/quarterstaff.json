@@ -1,0 +1,14 @@
+{
+  "tool": "quarterstaff",
+  "text": [
+    {
+      "text": "Rapide et polyvalent : chaque extrémité peut être coiffée d'un matériau différent. Son balayage inflige la moitié des dégâts autour de vous."
+    }
+  ],
+  "properties": [
+    "Balayage : 50 % des dégâts",
+    "À deux mains (I)",
+    "Rapide",
+    "Tool Station"
+  ]
+}

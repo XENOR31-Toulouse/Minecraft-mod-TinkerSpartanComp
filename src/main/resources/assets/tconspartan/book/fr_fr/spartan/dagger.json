@@ -1,0 +1,14 @@
+{
+  "tool": "dagger",
+  "text": [
+    {
+      "text": "La compagne des assassins. Légère et rapide, elle inflige le triple de dégâts quand on frappe un ennemi dans le dos, et se lance au besoin."
+    }
+  ],
+  "properties": [
+    "Dans le dos : dégâts triplés",
+    "Se lance",
+    "Rapide",
+    "Tool Station"
+  ]
+}

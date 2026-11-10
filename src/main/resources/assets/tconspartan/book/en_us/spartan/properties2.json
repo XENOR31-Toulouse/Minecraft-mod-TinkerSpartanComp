@@ -1,0 +1,58 @@
+{
+  "title": "Properties (2)",
+  "text": [
+    {
+      "text": "Bonus damage",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": extra damage in specific cases: from behind, against undead, while riding, or against enemies missing a chestplate or helmet."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Damage absorb",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": while held, reduces the melee damage you take."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Parry",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": hold right-click to turn aside melee attacks."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Versatile",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": also works as an axe."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Hold "
+    },
+    {
+      "text": "Shift",
+      "color": "dark_blue"
+    },
+    {
+      "text": " over a weapon to read the details of its properties."
+    }
+  ]
+}

@@ -17,6 +17,7 @@ import slimeknights.tconstruct.library.TinkerRegistryClient;
 import slimeknights.tconstruct.library.client.ToolBuildGuiInfo;
 import slimeknights.tconstruct.library.client.model.ModifierModelLoader;
 import tconspartan.TConSpartan;
+import tconspartan.client.SpartanBook;
 import tconspartan.client.SpartanTextures;
 import tconspartan.throwing.ThrownTools;
 import tconspartan.tools.SpartanWeapon;
@@ -50,6 +51,8 @@ public class ClientProxy extends CommonProxy {
             }
             TinkerRegistryClient.addToolBuilding(info);
         }
+        // Section « Arsenal spartiate » dans le livre de Tinkers
+        SpartanBook.register();
     }
 
     @SubscribeEvent

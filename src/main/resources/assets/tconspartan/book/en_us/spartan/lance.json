@@ -1,0 +1,13 @@
+{
+  "tool": "lance",
+  "text": [
+    {
+      "text": "Made for the charge. Mounted on a horse, every hit deals double damage. The large plate protects the hand that holds it."
+    }
+  ],
+  "properties": [
+    "Reach: 6 blocks",
+    "Double damage while riding",
+    "Tool Forge"
+  ]
+}

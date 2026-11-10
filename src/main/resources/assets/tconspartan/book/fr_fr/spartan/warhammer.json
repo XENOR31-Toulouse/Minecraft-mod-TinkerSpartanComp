@@ -1,0 +1,13 @@
+{
+  "tool": "warhammer",
+  "text": [
+    {
+      "text": "La réponse aux armures lourdes : la moitié de chaque coup les traverse. À manier à deux mains."
+    }
+  ],
+  "properties": [
+    "Ignore 50 % de l'armure",
+    "À deux mains (I)",
+    "Tool Forge"
+  ]
+}

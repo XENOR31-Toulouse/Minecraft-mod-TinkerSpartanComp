@@ -1,0 +1,14 @@
+{
+  "tool": "halberd",
+  "text": [
+    {
+      "text": "Axe, spike and hook on one long shaft. It hits from afar and knocks shields aside, leaving defenders open."
+    }
+  ],
+  "properties": [
+    "Reach: 6 blocks",
+    "Disables shields",
+    "Two-handed (II)",
+    "Tool Forge"
+  ]
+}

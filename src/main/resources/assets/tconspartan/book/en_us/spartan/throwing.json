@@ -1,0 +1,33 @@
+{
+  "title": "Throwing",
+  "text": [
+    {
+      "text": "Hold right-click, then release to throw. The longer you charge, the faster and harder the throw."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Throwing knives, axes and javelins come in stacks. Like Tinkers arrows, "
+    },
+    {
+      "text": "the number of projectiles comes from the durability of the materials",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": better materials, more throws."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Pick your projectiles back up: they return to an identical stack. Each hit wears them down, and an empty stack stays in your inventory until you refill it."
+    }
+  ]
+}

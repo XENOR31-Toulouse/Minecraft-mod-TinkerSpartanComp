@@ -1,0 +1,13 @@
+{
+  "tool": "boomerang",
+  "text": [
+    {
+      "text": "Lancez-le sur une cible et rattrapez-le au retour. Plus vous chargez, plus il va loin avant de faire demi-tour."
+    }
+  ],
+  "properties": [
+    "Revient au lanceur",
+    "Charger pour aller plus loin",
+    "Tool Station"
+  ]
+}

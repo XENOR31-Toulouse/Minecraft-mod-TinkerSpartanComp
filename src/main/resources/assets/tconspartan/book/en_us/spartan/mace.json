@@ -1,0 +1,12 @@
+{
+  "tool": "mace",
+  "text": [
+    {
+      "text": "Heavy flanges concentrate every blow. Zombies, skeletons and their kin take half again as much damage."
+    }
+  ],
+  "properties": [
+    "+50% damage to undead",
+    "Tool Station"
+  ]
+}

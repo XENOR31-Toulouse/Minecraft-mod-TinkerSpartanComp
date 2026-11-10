@@ -1,0 +1,14 @@
+{
+  "tool": "halberd",
+  "text": [
+    {
+      "text": "Hache, pique et crochet sur un long manche. Elle frappe de loin et écarte les boucliers, laissant les défenseurs à découvert."
+    }
+  ],
+  "properties": [
+    "Portée : 6 blocs",
+    "Désactive les boucliers",
+    "À deux mains (II)",
+    "Tool Forge"
+  ]
+}

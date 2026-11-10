@@ -1,0 +1,33 @@
+{
+  "title": "Smeltery",
+  "text": [
+    {
+      "text": "Les armes en métal de Spartan Weaponry peuvent être fondues dans la smeltery pour récupérer leur métal."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "La quantité suit la recette de fabrication, et "
+    },
+    {
+      "text": "une arme usée rend moins",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : une épée en fer à moitié usée rend environ la moitié de son fer."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Les armes Tinkers de cet arsenal fonctionnent comme tout outil Tinkers : leurs pièces se coulent et se fondent normalement."
+    }
+  ]
+}

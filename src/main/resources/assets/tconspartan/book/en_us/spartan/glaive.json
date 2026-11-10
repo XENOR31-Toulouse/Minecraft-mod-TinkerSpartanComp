@@ -1,0 +1,14 @@
+{
+  "tool": "glaive",
+  "text": [
+    {
+      "text": "A long blade on a long shaft: reach and sweep in one weapon. Wield it with both hands."
+    }
+  ],
+  "properties": [
+    "Reach: 6 blocks",
+    "Sweep: 50% damage",
+    "Two-handed (I)",
+    "Tool Forge"
+  ]
+}

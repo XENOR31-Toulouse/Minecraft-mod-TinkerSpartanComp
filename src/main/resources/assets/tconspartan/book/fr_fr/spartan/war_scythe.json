@@ -1,0 +1,14 @@
+{
+  "tool": "war_scythe",
+  "text": [
+    {
+      "text": "Son balayage porte plus loin que toute lame. Les ennemis sans casque subissent le double de dégâts. Exige les deux mains."
+    }
+  ],
+  "properties": [
+    "Large balayage",
+    "Dégâts doublés sans casque",
+    "À deux mains (II)",
+    "Tool Forge"
+  ]
+}

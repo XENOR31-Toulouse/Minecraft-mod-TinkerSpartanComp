@@ -1,0 +1,14 @@
+{
+  "tool": "war_scythe",
+  "text": [
+    {
+      "text": "Its sweep reaches further than any blade. Enemies without a helmet take double damage. Requires both hands."
+    }
+  ],
+  "properties": [
+    "Wide sweep",
+    "Double damage without helmet",
+    "Two-handed (II)",
+    "Tool Forge"
+  ]
+}

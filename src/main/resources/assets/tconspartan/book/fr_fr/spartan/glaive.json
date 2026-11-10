@@ -1,0 +1,14 @@
+{
+  "tool": "glaive",
+  "text": [
+    {
+      "text": "Une longue lame sur un long manche : la portée et le balayage dans une seule arme. À manier à deux mains."
+    }
+  ],
+  "properties": [
+    "Portée : 6 blocs",
+    "Balayage : 50 % des dégâts",
+    "À deux mains (I)",
+    "Tool Forge"
+  ]
+}

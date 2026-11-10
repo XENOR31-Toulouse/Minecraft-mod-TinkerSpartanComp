@@ -1,0 +1,13 @@
+{
+  "tool": "throwing_axe",
+  "text": [
+    {
+      "text": "Plus lentes à lancer que les couteaux, mais chaque hache frappe fort et inflige le double de dégâts. Ramassez-les pour recharger la pile."
+    }
+  ],
+  "properties": [
+    "Lancée : dégâts doublés",
+    "Munitions selon matériaux",
+    "Tool Station"
+  ]
+}

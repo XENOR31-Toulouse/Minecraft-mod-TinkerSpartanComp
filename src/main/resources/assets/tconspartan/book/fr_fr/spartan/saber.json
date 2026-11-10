@@ -1,0 +1,14 @@
+{
+  "tool": "saber",
+  "text": [
+    {
+      "text": "Le choix des duellistes : une lame balayante qui vous protège aussi. Tenue en main, elle absorbe un quart des dégâts de mêlée."
+    }
+  ],
+  "properties": [
+    "Absorbe 25 % des dégâts de mêlée",
+    "Dégâts doublés sans plastron",
+    "Attaque en balayage",
+    "Tool Station"
+  ]
+}

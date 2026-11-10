@@ -28,6 +28,10 @@ minecraft {
     if (project.hasProperty('dumpTextures')) {
         extraRunJvmArguments.add('-Dtconspartan.dumpTextures=true')
     }
+    // ./gradlew runClient -PcheckBook : vérifie le chargement des pages du livre Tinkers (voir le journal)
+    if (project.hasProperty('checkBook')) {
+        extraRunJvmArguments.add('-Dtconspartan.checkBook=true')
+    }
 }
 
 repositories {

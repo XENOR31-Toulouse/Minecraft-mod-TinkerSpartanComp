@@ -1,0 +1,13 @@
+{
+  "tool": "battle_hammer",
+  "text": [
+    {
+      "text": "Every hit sends enemies flying and leaves them reeling with nausea. Slow to swing, impossible to ignore."
+    }
+  ],
+  "properties": [
+    "Strong knockback",
+    "Inflicts nausea",
+    "Tool Forge"
+  ]
+}

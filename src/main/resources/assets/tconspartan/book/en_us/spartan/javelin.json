@@ -1,0 +1,13 @@
+{
+  "tool": "javelin",
+  "text": [
+    {
+      "text": "Charge the throw fully to send a javelin flying far and true: it deals triple damage. Fewer per bundle, but devastating."
+    }
+  ],
+  "properties": [
+    "Thrown: triple damage",
+    "Ammo from materials",
+    "Tool Station"
+  ]
+}

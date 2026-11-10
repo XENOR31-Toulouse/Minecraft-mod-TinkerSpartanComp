@@ -1,0 +1,13 @@
+{
+  "tool": "parrying_dagger",
+  "text": [
+    {
+      "text": "Pensée pour la défense plus que l'attaque. Maintenez clic droit pour la lever : les coups de mêlée sont détournés et n'entament que sa durabilité."
+    }
+  ],
+  "properties": [
+    "Pare les attaques de mêlée",
+    "Rapide",
+    "Tool Station"
+  ]
+}

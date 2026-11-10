@@ -1,0 +1,14 @@
+{
+  "tool": "quarterstaff",
+  "text": [
+    {
+      "text": "Quick and versatile: each end can be capped with a different material. Its sweep deals half damage to everything nearby."
+    }
+  ],
+  "properties": [
+    "Sweep: 50% damage",
+    "Two-handed (I)",
+    "Fast",
+    "Tool Station"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "tool": "lance",
+  "text": [
+    {
+      "text": "Faite pour la charge. À cheval, chaque coup inflige le double de dégâts. La large plaque protège la main qui la tient."
+    }
+  ],
+  "properties": [
+    "Portée : 6 blocs",
+    "Dégâts doublés à cheval",
+    "Tool Forge"
+  ]
+}

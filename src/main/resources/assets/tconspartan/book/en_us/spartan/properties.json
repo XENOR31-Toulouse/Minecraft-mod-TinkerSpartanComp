@@ -1,0 +1,52 @@
+{
+  "title": "Properties",
+  "text": [
+    {
+      "text": "Reach",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": strike from 6 or 7 blocks away."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Two-handed",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": with something in your other hand, damage drops by 50% (I) or 75% (II) and you suffer mining fatigue."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Sweep",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": also hits enemies around the target, for 1 damage, half or full damage."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Armour piercing",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": part of the damage ignores armour."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Shield breach",
+      "color": "dark_blue"
+    },
+    {
+      "text": ": disables the target's shield."
+    }
+  ]
+}

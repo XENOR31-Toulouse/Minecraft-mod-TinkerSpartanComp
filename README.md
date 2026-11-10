@@ -52,6 +52,20 @@ Longsword and rapier are left out: Tinkers already has them. So are bows and cro
   projectile gives its ammo back to an **identical stack** (same materials and modifiers, as with Tinkers
   arrows). Each impact wears the projectile itself: after enough hits, it is lost.
 
+## Tinkers book (Materials and You)
+A **"Spartan Arsenal"** section is added to the Tinkers book (English and French):
+- an introduction;
+- two glossary pages for the Spartan properties;
+- a throwing and ammo page and a smeltery page;
+- one page per weapon: the tool and its parts laid out as in the Tool Station, a description and its properties.
+
+The files live in `assets/tconspartan/book/`: `index.json`, `sections/spartan.json`, and texts under `<lang>/spartan/`.
+`client/SpartanBook` registers them with Tinkers and builds the table of contents. To check that every page
+loads without opening the book: `./gradlew runClient -PcheckBook` (results in the log, lines `[book]`).
+
+**Names, descriptions and book texts** all come from one table, `scripts/gen_content.py` (English + French):
+edit it, then run `python scripts/gen_content.py .` to regenerate `lang/*.lang` and the book pages.
+
 ## Smeltery
 - Spartan metal weapons melt down; the amount of metal comes from their crafting recipe.
 - **Wear**: a damaged weapon returns metal in proportion to its remaining durability (rounded to the nugget,

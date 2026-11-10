@@ -1,0 +1,13 @@
+{
+  "tool": "battle_axe",
+  "text": [
+    {
+      "text": "Built for war, handy in the forest: it mines wood like an axe, using the harvest level of its head."
+    }
+  ],
+  "properties": [
+    "Also an axe",
+    "Two-handed (I)",
+    "Tool Forge"
+  ]
+}

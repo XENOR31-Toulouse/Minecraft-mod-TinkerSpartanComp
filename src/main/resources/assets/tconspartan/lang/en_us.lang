@@ -1,46 +1,48 @@
-# Tool Station
+# Weapons
 item.tconspartan.dagger.name=Dagger
-item.tconspartan.dagger.desc=A short, quick blade. Deals extra damage when striking from behind.\nHold right-click to throw it.
+item.tconspartan.dagger.desc=A short, quick blade that strikes three times harder from behind.\nHold right-click to throw it.
 item.tconspartan.parrying_dagger.name=Parrying Dagger
-item.tconspartan.parrying_dagger.desc=An off-hand blade made for defence.\nHold right-click to parry melee attacks.
+item.tconspartan.parrying_dagger.desc=An off-hand blade made to turn aside blows.\nHold right-click to parry melee attacks.
 item.tconspartan.katana.name=Katana
-item.tconspartan.katana.desc=A swift curved sword. Sweeps, and hits harder against foes without a chestplate.\nBest wielded with both hands.
+item.tconspartan.katana.desc=A swift curved sword that sweeps through crowds and bites deep into unarmoured foes.\nBest wielded with both hands.
 item.tconspartan.saber.name=Saber
-item.tconspartan.saber.desc=A cavalry sword with a sweeping strike. Absorbs part of the melee damage you take while held.
+item.tconspartan.saber.desc=A cavalry sword with a sweeping strike.\nHolding it absorbs part of the melee damage you take.
 item.tconspartan.spear.name=Spear
-item.tconspartan.spear.desc=Keeps enemies at a distance thanks to its extended reach.
-item.tconspartan.mace.name=Mace
-item.tconspartan.mace.desc=A flanged club that is especially effective against the undead.
+item.tconspartan.spear.desc=A simple, reliable polearm that keeps enemies at arm's length.
+item.tconspartan.mace.name=Flanged Mace
+item.tconspartan.mace.desc=A flanged club that cracks bones.\nEspecially effective against the undead.
 item.tconspartan.quarterstaff.name=Quarterstaff
-item.tconspartan.quarterstaff.desc=A fast two-handed staff with a half-damage sweep.\nThe head material caps the top end, the binding the bottom end.
+item.tconspartan.quarterstaff.desc=A fast two-handed staff that sweeps around you.\nThe head material caps the top end, the binding the bottom end.
 item.tconspartan.throwing_knife.name=Throwing Knife
-item.tconspartan.throwing_knife.desc=A stack of throwing knives: the count depends on the materials (head durability), like Tinkers arrows.\nHold right-click and release to throw one. Picked-up knives return to an identical stack.
+item.tconspartan.throwing_knife.desc=A stack of balanced knives: their number depends on the materials.\nHold right-click and release to throw one.
 item.tconspartan.throwing_axe.name=Throwing Axe
-item.tconspartan.throwing_axe.desc=A stack of throwing axes: the count depends on the materials, like Tinkers arrows.\nHold right-click and release to throw one. Picked-up axes return to an identical stack.
+item.tconspartan.throwing_axe.desc=A stack of heavy throwing axes: their number depends on the materials.\nHold right-click and release to throw one.
 item.tconspartan.javelin.name=Javelin
-item.tconspartan.javelin.desc=A bundle of javelins dealing heavy damage when thrown: the count depends on the materials.\nPicked-up javelins return to an identical bundle.
+item.tconspartan.javelin.desc=A bundle of javelins that deal heavy damage when thrown.\nHold right-click and release to throw one.
 item.tconspartan.boomerang.name=Boomerang
-item.tconspartan.boomerang.desc=Hold right-click and release to throw it: it comes back to you after hitting something.
-
-# Tool Forge
+item.tconspartan.boomerang.desc=Hold right-click and release to throw it:\nit flies back to you after hitting something.
 item.tconspartan.pike.name=Pike
-item.tconspartan.pike.desc=A very long two-handed spear with greatly extended reach.\nRequires the Tool Forge.
+item.tconspartan.pike.desc=A very long spear held with both hands.\nHits from further away than any other weapon.
 item.tconspartan.lance.name=Lance
-item.tconspartan.lance.desc=A cavalry weapon with extended reach. Deals extra damage while riding.\nRequires the Tool Forge.
+item.tconspartan.lance.desc=A knightly weapon with extended reach.\nDeals double damage while riding.
 item.tconspartan.glaive.name=Glaive
-item.tconspartan.glaive.desc=A bladed polearm with extended reach and a half-damage sweep.\nRequires the Tool Forge.
+item.tconspartan.glaive.desc=A bladed polearm with extended reach.\nIts sweep deals half damage around the target.
 item.tconspartan.greatsword.name=Greatsword
-item.tconspartan.greatsword.desc=A massive two-handed sword. Extended reach, and its sweep deals full damage.\nRequires the Tool Forge.
+item.tconspartan.greatsword.desc=A massive two-handed sword.\nIts sweep deals full damage to everything around the target.
 item.tconspartan.halberd.name=Halberd
-item.tconspartan.halberd.desc=A heavy two-handed polearm with extended reach. Disables shields.\nRequires the Tool Forge.
+item.tconspartan.halberd.desc=A heavy polearm with extended reach.\nIts blows disable shields.
 item.tconspartan.battle_axe.name=Battleaxe
-item.tconspartan.battle_axe.desc=A heavy two-handed axe that also chops wood.\nRequires the Tool Forge.
+item.tconspartan.battle_axe.desc=A heavy double-bitted axe.\nA weapon first, but it also chops wood.
 item.tconspartan.warhammer.name=Warhammer
-item.tconspartan.warhammer.desc=Its spike crushes through armour: part of the damage ignores it.\nRequires the Tool Forge.
+item.tconspartan.warhammer.desc=Its spike punches through plate.\nHalf of the damage ignores armour.
 item.tconspartan.battle_hammer.name=Battle Hammer
-item.tconspartan.battle_hammer.desc=A slow, crushing hammer that knocks enemies back and leaves them dazed.\nRequires the Tool Forge.
+item.tconspartan.battle_hammer.desc=A slow, crushing hammer.\nKnocks enemies back and leaves them dazed.
 item.tconspartan.war_scythe.name=War Scythe
-item.tconspartan.war_scythe.desc=A reaping weapon with a wide sweep. Hits harder against foes without a helmet.\nRequires the Tool Forge.
+item.tconspartan.war_scythe.desc=A reaping weapon with a wide sweep.\nHits harder against foes without a helmet.
+
+# Weapons
+
+# Weapons
 
 # Entities
 entity.tconspartan.thrown_dagger.name=Thrown Dagger
@@ -49,5 +51,4 @@ entity.tconspartan.thrown_axe.name=Thrown Axe
 entity.tconspartan.thrown_javelin.name=Thrown Javelin
 entity.tconspartan.thrown_boomerang.name=Boomerang
 
-# Tooltip
 tooltip.tconspartan.properties=Spartan properties:

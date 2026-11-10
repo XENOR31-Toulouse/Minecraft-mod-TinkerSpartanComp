@@ -1,0 +1,52 @@
+{
+  "title": "Propriétés",
+  "text": [
+    {
+      "text": "Portée",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : frappe à 6 ou 7 blocs."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "À deux mains",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : avec un objet dans l'autre main, les dégâts baissent de 50 % (I) ou 75 % (II) et vous subissez la fatigue."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Balayage",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : touche aussi les ennemis autour de la cible, pour 1 dégât, la moitié ou la totalité."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Perforation",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : une partie des dégâts ignore l'armure."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Brise-bouclier",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : désactive le bouclier de la cible."
+    }
+  ]
+}

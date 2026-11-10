@@ -1,0 +1,11 @@
+[
+  {
+    "name": "spartan",
+    "data": "sections/spartan.json",
+    "icon": {
+      "item": {
+        "id": "spartanweaponry:katana_iron"
+      }
+    }
+  }
+]

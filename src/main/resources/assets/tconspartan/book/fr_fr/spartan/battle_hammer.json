@@ -1,0 +1,13 @@
+{
+  "tool": "battle_hammer",
+  "text": [
+    {
+      "text": "Chaque coup projette les ennemis et les laisse nauséeux. Lent à manier, impossible à ignorer."
+    }
+  ],
+  "properties": [
+    "Fort recul",
+    "Inflige la nausée",
+    "Tool Forge"
+  ]
+}

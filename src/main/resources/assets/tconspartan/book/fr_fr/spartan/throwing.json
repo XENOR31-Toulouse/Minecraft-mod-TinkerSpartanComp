@@ -1,0 +1,33 @@
+{
+  "title": "Lancer",
+  "text": [
+    {
+      "text": "Maintenez clic droit, puis relâchez pour lancer. Plus vous chargez, plus le lancer est rapide et puissant."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Couteaux, haches de lancer et javelots se présentent en piles. Comme pour les flèches Tinkers, "
+    },
+    {
+      "text": "le nombre de projectiles vient de la durabilité des matériaux",
+      "color": "dark_blue"
+    },
+    {
+      "text": " : meilleurs matériaux, plus de lancers."
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Ramassez vos projectiles : ils retournent dans une pile identique. Chaque coup les use, et une pile vide reste dans l'inventaire jusqu'à ce que vous la rechargiez."
+    }
+  ]
+}
