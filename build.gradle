@@ -1,0 +1,64 @@
+plugins {
+    id 'java'
+    id 'com.gtnewhorizons.retrofuturagradle' version '2.0.3'
+}
+
+version = mod_version
+group = root_package
+
+base {
+    archivesName.set(mod_id)
+}
+
+java {
+    toolchain {
+        // Minecraft 1.12.2 tourne en Java 8 ; Gradle lui-même tourne sur le JDK de JAVA_HOME.
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
+minecraft {
+    mcVersion.set('1.12.2')
+    mcpMappingChannel.set(mapping_channel)
+    mcpMappingVersion.set(mapping_version)
+    useDependencyAccessTransformers.set(true)
+    username.set('Developer')
+    extraRunJvmArguments.addAll(['-ea:' + root_package])
+}
+
+repositories {
+    maven {
+        name 'CurseMaven'
+        url 'https://cursemaven.com'
+        content { includeGroup 'curse.maven' }
+    }
+}
+
+dependencies {
+    implementation rfg.deobf(mantle_dep)
+    implementation rfg.deobf(tconstruct_dep)
+    // Spartan Weaponry est un coremod (il embarque Mixin) : chargé depuis le classpath, FML ignore son @Mod.
+    // On compile contre lui, et on le place dans run/mods pour l'exécution (voir copySpartanToMods).
+    compileOnly rfg.deobf(spartan_dep)
+}
+
+def copySpartanToMods = tasks.register('copySpartanToMods', Copy) {
+    from { configurations.compileClasspath.filter { it.name.startsWith('spartan-weaponry') } }
+    into file('run/mods')
+}
+['runClient', 'runServer'].each { name ->
+    tasks.named(name) { dependsOn copySpartanToMods }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    inputs.property 'mod_id', mod_id
+    inputs.property 'mod_name', mod_name
+    inputs.property 'mod_version', mod_version
+    filesMatching(['mcmod.info']) {
+        expand('mod_id': mod_id, 'mod_name': mod_name, 'mod_version': mod_version)
+    }
+}

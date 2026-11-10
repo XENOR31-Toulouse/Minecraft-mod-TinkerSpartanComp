@@ -1,0 +1,13 @@
+[
+  {
+    "modid": "${mod_id}",
+    "name": "${mod_name}",
+    "description": "Addon linking Tinkers' Construct and Spartan Weaponry: Spartan weapons as modular Tinkers tools, and Spartan metal weapons melt in the smeltery.",
+    "version": "${mod_version}",
+    "mcversion": "1.12.2",
+    "authorList": [],
+    "credits": "Tinkers' Construct by the SlimeKnights, Spartan Weaponry by ObliviousSpartan. Weapon textures are taken at runtime from Spartan Weaponry.",
+    "dependencies": ["mantle", "tconstruct", "spartanweaponry"],
+    "requiredMods": ["mantle", "tconstruct", "spartanweaponry"]
+  }
+]

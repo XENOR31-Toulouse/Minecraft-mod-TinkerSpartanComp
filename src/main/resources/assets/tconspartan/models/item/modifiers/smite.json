@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_smite",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_smite",
+        "katana": "tconspartan:items/katana/mod_smite",
+        "saber": "tconspartan:items/saber/mod_smite",
+        "spear": "tconspartan:items/spear/mod_smite",
+        "mace": "tconspartan:items/mace/mod_smite",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_smite",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_smite",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_smite",
+        "javelin": "tconspartan:items/javelin/mod_smite",
+        "boomerang": "tconspartan:items/boomerang/mod_smite",
+        "pike": "tconspartan:items/pike/mod_smite",
+        "lance": "tconspartan:items/lance/mod_smite",
+        "glaive": "tconspartan:items/glaive/mod_smite",
+        "greatsword": "tconspartan:items/greatsword/mod_smite",
+        "halberd": "tconspartan:items/halberd/mod_smite",
+        "battle_axe": "tconspartan:items/battle_axe/mod_smite",
+        "warhammer": "tconspartan:items/warhammer/mod_smite",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_smite",
+        "war_scythe": "tconspartan:items/war_scythe/mod_smite"
+    }
+}

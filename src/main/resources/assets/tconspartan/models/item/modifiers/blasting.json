@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_blasting",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_blasting",
+        "katana": "tconspartan:items/katana/mod_blasting",
+        "saber": "tconspartan:items/saber/mod_blasting",
+        "spear": "tconspartan:items/spear/mod_blasting",
+        "mace": "tconspartan:items/mace/mod_blasting",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_blasting",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_blasting",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_blasting",
+        "javelin": "tconspartan:items/javelin/mod_blasting",
+        "boomerang": "tconspartan:items/boomerang/mod_blasting",
+        "pike": "tconspartan:items/pike/mod_blasting",
+        "lance": "tconspartan:items/lance/mod_blasting",
+        "glaive": "tconspartan:items/glaive/mod_blasting",
+        "greatsword": "tconspartan:items/greatsword/mod_blasting",
+        "halberd": "tconspartan:items/halberd/mod_blasting",
+        "battle_axe": "tconspartan:items/battle_axe/mod_blasting",
+        "warhammer": "tconspartan:items/warhammer/mod_blasting",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_blasting",
+        "war_scythe": "tconspartan:items/war_scythe/mod_blasting"
+    }
+}

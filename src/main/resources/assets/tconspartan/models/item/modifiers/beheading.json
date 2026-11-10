@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_beheading",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_beheading",
+        "katana": "tconspartan:items/katana/mod_beheading",
+        "saber": "tconspartan:items/saber/mod_beheading",
+        "spear": "tconspartan:items/spear/mod_beheading",
+        "mace": "tconspartan:items/mace/mod_beheading",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_beheading",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_beheading",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_beheading",
+        "javelin": "tconspartan:items/javelin/mod_beheading",
+        "boomerang": "tconspartan:items/boomerang/mod_beheading",
+        "pike": "tconspartan:items/pike/mod_beheading",
+        "lance": "tconspartan:items/lance/mod_beheading",
+        "glaive": "tconspartan:items/glaive/mod_beheading",
+        "greatsword": "tconspartan:items/greatsword/mod_beheading",
+        "halberd": "tconspartan:items/halberd/mod_beheading",
+        "battle_axe": "tconspartan:items/battle_axe/mod_beheading",
+        "warhammer": "tconspartan:items/warhammer/mod_beheading",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_beheading",
+        "war_scythe": "tconspartan:items/war_scythe/mod_beheading"
+    }
+}

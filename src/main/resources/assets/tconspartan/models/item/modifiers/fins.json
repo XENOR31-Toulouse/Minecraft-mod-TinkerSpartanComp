@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_fins",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_fins",
+        "katana": "tconspartan:items/katana/mod_fins",
+        "saber": "tconspartan:items/saber/mod_fins",
+        "spear": "tconspartan:items/spear/mod_fins",
+        "mace": "tconspartan:items/mace/mod_fins",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_fins",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_fins",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_fins",
+        "javelin": "tconspartan:items/javelin/mod_fins",
+        "boomerang": "tconspartan:items/boomerang/mod_fins",
+        "pike": "tconspartan:items/pike/mod_fins",
+        "lance": "tconspartan:items/lance/mod_fins",
+        "glaive": "tconspartan:items/glaive/mod_fins",
+        "greatsword": "tconspartan:items/greatsword/mod_fins",
+        "halberd": "tconspartan:items/halberd/mod_fins",
+        "battle_axe": "tconspartan:items/battle_axe/mod_fins",
+        "warhammer": "tconspartan:items/warhammer/mod_fins",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_fins",
+        "war_scythe": "tconspartan:items/war_scythe/mod_fins"
+    }
+}

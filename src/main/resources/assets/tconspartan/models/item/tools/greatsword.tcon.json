@@ -1,0 +1,128 @@
+{
+    "textures": {
+        "layer0": "tconspartan:items/greatsword/handle",
+        "layer1": "tconspartan:items/greatsword/head",
+        "layer2": "tconspartan:items/greatsword/extra"
+    },
+    "display": {
+        "ground": {
+            "rotation": [
+                0,
+                0,
+                0
+            ],
+            "translation": [
+                0.0,
+                4.25,
+                0.0
+            ],
+            "scale": [
+                0.9375,
+                0.9375,
+                0.46875
+            ]
+        },
+        "head": {
+            "rotation": [
+                0,
+                180,
+                0
+            ],
+            "translation": [
+                0,
+                13,
+                7
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "fixed": {
+            "rotation": [
+                0,
+                180,
+                0
+            ],
+            "translation": [
+                0,
+                0,
+                0
+            ],
+            "scale": [
+                1,
+                1,
+                1
+            ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                55
+            ],
+            "translation": [
+                0,
+                8.5,
+                0.5
+            ],
+            "scale": [
+                1.7,
+                1.7,
+                1.7
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -55
+            ],
+            "translation": [
+                0,
+                8.5,
+                0.5
+            ],
+            "scale": [
+                1.7,
+                1.7,
+                1.7
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                30
+            ],
+            "translation": [
+                1.0,
+                4.0,
+                1.25
+            ],
+            "scale": [
+                0.95,
+                0.95,
+                0.475
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -30
+            ],
+            "translation": [
+                1.0,
+                4.0,
+                1.25
+            ],
+            "scale": [
+                0.95,
+                0.95,
+                0.475
+            ]
+        }
+    }
+}

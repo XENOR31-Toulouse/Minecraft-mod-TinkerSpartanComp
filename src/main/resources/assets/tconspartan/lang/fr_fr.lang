@@ -1,0 +1,54 @@
+# Tool Station
+item.tconspartan.dagger.name=Dague
+item.tconspartan.dagger.desc=Une lame courte et rapide. Inflige des dégâts supplémentaires dans le dos.\nMaintenez clic droit pour la lancer.
+item.tconspartan.parrying_dagger.name=Dague de parade
+item.tconspartan.parrying_dagger.desc=Une lame de seconde main faite pour se défendre.\nMaintenez clic droit pour parer les attaques de mêlée.
+item.tconspartan.katana.name=Katana
+item.tconspartan.katana.desc=Un sabre courbé et rapide. Attaque en balayage et frappe plus fort les ennemis sans plastron.\nÀ manier à deux mains.
+item.tconspartan.saber.name=Sabre
+item.tconspartan.saber.desc=Une épée de cavalerie qui frappe en balayage. Absorbe une partie des dégâts de mêlée reçus quand elle est tenue.
+item.tconspartan.spear.name=Lance
+item.tconspartan.spear.desc=Tient les ennemis à distance grâce à sa portée étendue.
+item.tconspartan.mace.name=Masse d'armes
+item.tconspartan.mace.desc=Une masse à ailettes particulièrement efficace contre les morts-vivants.
+item.tconspartan.quarterstaff.name=Bâton de combat
+item.tconspartan.quarterstaff.desc=Un bâton rapide à deux mains, avec un balayage à mi-dégâts.\nLe matériau de la tête coiffe le haut, celui de l'attache le bas.
+item.tconspartan.throwing_knife.name=Couteau de lancer
+item.tconspartan.throwing_knife.desc=Une pile de 16 couteaux de lancer. Maintenez clic droit puis relâchez pour en lancer un.\nLes couteaux ramassés retournent dans leur pile.
+item.tconspartan.throwing_axe.name=Hache de lancer
+item.tconspartan.throwing_axe.desc=Une pile de 8 haches de lancer. Maintenez clic droit puis relâchez pour en lancer une.\nLes haches ramassées retournent dans leur pile.
+item.tconspartan.javelin.name=Javelot
+item.tconspartan.javelin.desc=Un lot de 4 javelots aux lourds dégâts en lancer.\nLes javelots ramassés retournent dans leur lot.
+item.tconspartan.boomerang.name=Boomerang
+item.tconspartan.boomerang.desc=Maintenez clic droit puis relâchez pour le lancer : il revient après avoir touché quelque chose.
+
+# Tool Forge
+item.tconspartan.pike.name=Pique
+item.tconspartan.pike.desc=Une très longue lance à deux mains, à la portée fortement étendue.\nNécessite la Tool Forge.
+item.tconspartan.lance.name=Lance de cavalerie
+item.tconspartan.lance.desc=Une arme de cavalerie à portée étendue. Dégâts accrus à cheval.\nNécessite la Tool Forge.
+item.tconspartan.glaive.name=Glaive
+item.tconspartan.glaive.desc=Une arme d'hast tranchante avec une portée étendue et un balayage à mi-dégâts.\nNécessite la Tool Forge.
+item.tconspartan.greatsword.name=Espadon
+item.tconspartan.greatsword.desc=Une énorme épée à deux mains. Portée étendue, et son balayage inflige tous les dégâts.\nNécessite la Tool Forge.
+item.tconspartan.halberd.name=Hallebarde
+item.tconspartan.halberd.desc=Une lourde arme d'hast à deux mains avec une portée étendue. Désactive les boucliers.\nNécessite la Tool Forge.
+item.tconspartan.battle_axe.name=Hache de bataille
+item.tconspartan.battle_axe.desc=Une lourde hache à deux mains qui coupe aussi le bois.\nNécessite la Tool Forge.
+item.tconspartan.warhammer.name=Marteau de guerre
+item.tconspartan.warhammer.desc=Sa pointe écrase les armures : une partie des dégâts les ignore.\nNécessite la Tool Forge.
+item.tconspartan.battle_hammer.name=Marteau de bataille
+item.tconspartan.battle_hammer.desc=Un marteau lent et écrasant qui repousse les ennemis et les étourdit.\nNécessite la Tool Forge.
+item.tconspartan.war_scythe.name=Faux de guerre
+item.tconspartan.war_scythe.desc=Une arme de moisson au large balayage. Frappe plus fort les ennemis sans casque.\nNécessite la Tool Forge.
+
+# Entités
+entity.tconspartan.thrown_dagger.name=Dague lancée
+entity.tconspartan.thrown_knife.name=Couteau lancé
+entity.tconspartan.thrown_axe.name=Hache lancée
+entity.tconspartan.thrown_javelin.name=Javelot lancé
+entity.tconspartan.thrown_boomerang.name=Boomerang
+
+# Infobulle
+tooltip.tconspartan.properties=Propriétés Spartan :
+tooltip.tconspartan.ammo=Munitions : %s / %s

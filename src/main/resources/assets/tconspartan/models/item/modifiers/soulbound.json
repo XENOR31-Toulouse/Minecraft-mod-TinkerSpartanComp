@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_soulbound",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_soulbound",
+        "katana": "tconspartan:items/katana/mod_soulbound",
+        "saber": "tconspartan:items/saber/mod_soulbound",
+        "spear": "tconspartan:items/spear/mod_soulbound",
+        "mace": "tconspartan:items/mace/mod_soulbound",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_soulbound",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_soulbound",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_soulbound",
+        "javelin": "tconspartan:items/javelin/mod_soulbound",
+        "boomerang": "tconspartan:items/boomerang/mod_soulbound",
+        "pike": "tconspartan:items/pike/mod_soulbound",
+        "lance": "tconspartan:items/lance/mod_soulbound",
+        "glaive": "tconspartan:items/glaive/mod_soulbound",
+        "greatsword": "tconspartan:items/greatsword/mod_soulbound",
+        "halberd": "tconspartan:items/halberd/mod_soulbound",
+        "battle_axe": "tconspartan:items/battle_axe/mod_soulbound",
+        "warhammer": "tconspartan:items/warhammer/mod_soulbound",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_soulbound",
+        "war_scythe": "tconspartan:items/war_scythe/mod_soulbound"
+    }
+}

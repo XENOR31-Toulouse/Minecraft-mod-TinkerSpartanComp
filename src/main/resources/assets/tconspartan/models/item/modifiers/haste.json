@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_haste",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_haste",
+        "katana": "tconspartan:items/katana/mod_haste",
+        "saber": "tconspartan:items/saber/mod_haste",
+        "spear": "tconspartan:items/spear/mod_haste",
+        "mace": "tconspartan:items/mace/mod_haste",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_haste",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_haste",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_haste",
+        "javelin": "tconspartan:items/javelin/mod_haste",
+        "boomerang": "tconspartan:items/boomerang/mod_haste",
+        "pike": "tconspartan:items/pike/mod_haste",
+        "lance": "tconspartan:items/lance/mod_haste",
+        "glaive": "tconspartan:items/glaive/mod_haste",
+        "greatsword": "tconspartan:items/greatsword/mod_haste",
+        "halberd": "tconspartan:items/halberd/mod_haste",
+        "battle_axe": "tconspartan:items/battle_axe/mod_haste",
+        "warhammer": "tconspartan:items/warhammer/mod_haste",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_haste",
+        "war_scythe": "tconspartan:items/war_scythe/mod_haste"
+    }
+}

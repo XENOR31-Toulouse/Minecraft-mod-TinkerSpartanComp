@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_diamond",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_diamond",
+        "katana": "tconspartan:items/katana/mod_diamond",
+        "saber": "tconspartan:items/saber/mod_diamond",
+        "spear": "tconspartan:items/spear/mod_diamond",
+        "mace": "tconspartan:items/mace/mod_diamond",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_diamond",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_diamond",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_diamond",
+        "javelin": "tconspartan:items/javelin/mod_diamond",
+        "boomerang": "tconspartan:items/boomerang/mod_diamond",
+        "pike": "tconspartan:items/pike/mod_diamond",
+        "lance": "tconspartan:items/lance/mod_diamond",
+        "glaive": "tconspartan:items/glaive/mod_diamond",
+        "greatsword": "tconspartan:items/greatsword/mod_diamond",
+        "halberd": "tconspartan:items/halberd/mod_diamond",
+        "battle_axe": "tconspartan:items/battle_axe/mod_diamond",
+        "warhammer": "tconspartan:items/warhammer/mod_diamond",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_diamond",
+        "war_scythe": "tconspartan:items/war_scythe/mod_diamond"
+    }
+}

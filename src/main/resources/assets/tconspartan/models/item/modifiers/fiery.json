@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_fiery",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_fiery",
+        "katana": "tconspartan:items/katana/mod_fiery",
+        "saber": "tconspartan:items/saber/mod_fiery",
+        "spear": "tconspartan:items/spear/mod_fiery",
+        "mace": "tconspartan:items/mace/mod_fiery",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_fiery",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_fiery",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_fiery",
+        "javelin": "tconspartan:items/javelin/mod_fiery",
+        "boomerang": "tconspartan:items/boomerang/mod_fiery",
+        "pike": "tconspartan:items/pike/mod_fiery",
+        "lance": "tconspartan:items/lance/mod_fiery",
+        "glaive": "tconspartan:items/glaive/mod_fiery",
+        "greatsword": "tconspartan:items/greatsword/mod_fiery",
+        "halberd": "tconspartan:items/halberd/mod_fiery",
+        "battle_axe": "tconspartan:items/battle_axe/mod_fiery",
+        "warhammer": "tconspartan:items/warhammer/mod_fiery",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_fiery",
+        "war_scythe": "tconspartan:items/war_scythe/mod_fiery"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_necrotic",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_necrotic",
+        "katana": "tconspartan:items/katana/mod_necrotic",
+        "saber": "tconspartan:items/saber/mod_necrotic",
+        "spear": "tconspartan:items/spear/mod_necrotic",
+        "mace": "tconspartan:items/mace/mod_necrotic",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_necrotic",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_necrotic",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_necrotic",
+        "javelin": "tconspartan:items/javelin/mod_necrotic",
+        "boomerang": "tconspartan:items/boomerang/mod_necrotic",
+        "pike": "tconspartan:items/pike/mod_necrotic",
+        "lance": "tconspartan:items/lance/mod_necrotic",
+        "glaive": "tconspartan:items/glaive/mod_necrotic",
+        "greatsword": "tconspartan:items/greatsword/mod_necrotic",
+        "halberd": "tconspartan:items/halberd/mod_necrotic",
+        "battle_axe": "tconspartan:items/battle_axe/mod_necrotic",
+        "warhammer": "tconspartan:items/warhammer/mod_necrotic",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_necrotic",
+        "war_scythe": "tconspartan:items/war_scythe/mod_necrotic"
+    }
+}

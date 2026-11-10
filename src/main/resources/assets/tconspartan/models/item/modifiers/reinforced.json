@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_reinforced",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_reinforced",
+        "katana": "tconspartan:items/katana/mod_reinforced",
+        "saber": "tconspartan:items/saber/mod_reinforced",
+        "spear": "tconspartan:items/spear/mod_reinforced",
+        "mace": "tconspartan:items/mace/mod_reinforced",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_reinforced",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_reinforced",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_reinforced",
+        "javelin": "tconspartan:items/javelin/mod_reinforced",
+        "boomerang": "tconspartan:items/boomerang/mod_reinforced",
+        "pike": "tconspartan:items/pike/mod_reinforced",
+        "lance": "tconspartan:items/lance/mod_reinforced",
+        "glaive": "tconspartan:items/glaive/mod_reinforced",
+        "greatsword": "tconspartan:items/greatsword/mod_reinforced",
+        "halberd": "tconspartan:items/halberd/mod_reinforced",
+        "battle_axe": "tconspartan:items/battle_axe/mod_reinforced",
+        "warhammer": "tconspartan:items/warhammer/mod_reinforced",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_reinforced",
+        "war_scythe": "tconspartan:items/war_scythe/mod_reinforced"
+    }
+}

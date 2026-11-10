@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_knockback",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_knockback",
+        "katana": "tconspartan:items/katana/mod_knockback",
+        "saber": "tconspartan:items/saber/mod_knockback",
+        "spear": "tconspartan:items/spear/mod_knockback",
+        "mace": "tconspartan:items/mace/mod_knockback",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_knockback",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_knockback",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_knockback",
+        "javelin": "tconspartan:items/javelin/mod_knockback",
+        "boomerang": "tconspartan:items/boomerang/mod_knockback",
+        "pike": "tconspartan:items/pike/mod_knockback",
+        "lance": "tconspartan:items/lance/mod_knockback",
+        "glaive": "tconspartan:items/glaive/mod_knockback",
+        "greatsword": "tconspartan:items/greatsword/mod_knockback",
+        "halberd": "tconspartan:items/halberd/mod_knockback",
+        "battle_axe": "tconspartan:items/battle_axe/mod_knockback",
+        "warhammer": "tconspartan:items/warhammer/mod_knockback",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_knockback",
+        "war_scythe": "tconspartan:items/war_scythe/mod_knockback"
+    }
+}

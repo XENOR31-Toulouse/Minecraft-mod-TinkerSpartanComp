@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_fortify",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_fortify",
+        "katana": "tconspartan:items/katana/mod_fortify",
+        "saber": "tconspartan:items/saber/mod_fortify",
+        "spear": "tconspartan:items/spear/mod_fortify",
+        "mace": "tconspartan:items/mace/mod_fortify",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_fortify",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_fortify",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_fortify",
+        "javelin": "tconspartan:items/javelin/mod_fortify",
+        "boomerang": "tconspartan:items/boomerang/mod_fortify",
+        "pike": "tconspartan:items/pike/mod_fortify",
+        "lance": "tconspartan:items/lance/mod_fortify",
+        "glaive": "tconspartan:items/glaive/mod_fortify",
+        "greatsword": "tconspartan:items/greatsword/mod_fortify",
+        "halberd": "tconspartan:items/halberd/mod_fortify",
+        "battle_axe": "tconspartan:items/battle_axe/mod_fortify",
+        "warhammer": "tconspartan:items/warhammer/mod_fortify",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_fortify",
+        "war_scythe": "tconspartan:items/war_scythe/mod_fortify"
+    }
+}

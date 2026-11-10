@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_shulking",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_shulking",
+        "katana": "tconspartan:items/katana/mod_shulking",
+        "saber": "tconspartan:items/saber/mod_shulking",
+        "spear": "tconspartan:items/spear/mod_shulking",
+        "mace": "tconspartan:items/mace/mod_shulking",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_shulking",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_shulking",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_shulking",
+        "javelin": "tconspartan:items/javelin/mod_shulking",
+        "boomerang": "tconspartan:items/boomerang/mod_shulking",
+        "pike": "tconspartan:items/pike/mod_shulking",
+        "lance": "tconspartan:items/lance/mod_shulking",
+        "glaive": "tconspartan:items/glaive/mod_shulking",
+        "greatsword": "tconspartan:items/greatsword/mod_shulking",
+        "halberd": "tconspartan:items/halberd/mod_shulking",
+        "battle_axe": "tconspartan:items/battle_axe/mod_shulking",
+        "warhammer": "tconspartan:items/warhammer/mod_shulking",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_shulking",
+        "war_scythe": "tconspartan:items/war_scythe/mod_shulking"
+    }
+}

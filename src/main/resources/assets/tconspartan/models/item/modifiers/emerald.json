@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_emerald",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_emerald",
+        "katana": "tconspartan:items/katana/mod_emerald",
+        "saber": "tconspartan:items/saber/mod_emerald",
+        "spear": "tconspartan:items/spear/mod_emerald",
+        "mace": "tconspartan:items/mace/mod_emerald",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_emerald",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_emerald",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_emerald",
+        "javelin": "tconspartan:items/javelin/mod_emerald",
+        "boomerang": "tconspartan:items/boomerang/mod_emerald",
+        "pike": "tconspartan:items/pike/mod_emerald",
+        "lance": "tconspartan:items/lance/mod_emerald",
+        "glaive": "tconspartan:items/glaive/mod_emerald",
+        "greatsword": "tconspartan:items/greatsword/mod_emerald",
+        "halberd": "tconspartan:items/halberd/mod_emerald",
+        "battle_axe": "tconspartan:items/battle_axe/mod_emerald",
+        "warhammer": "tconspartan:items/warhammer/mod_emerald",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_emerald",
+        "war_scythe": "tconspartan:items/war_scythe/mod_emerald"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_mending_moss",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_mending_moss",
+        "katana": "tconspartan:items/katana/mod_mending_moss",
+        "saber": "tconspartan:items/saber/mod_mending_moss",
+        "spear": "tconspartan:items/spear/mod_mending_moss",
+        "mace": "tconspartan:items/mace/mod_mending_moss",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_mending_moss",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_mending_moss",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_mending_moss",
+        "javelin": "tconspartan:items/javelin/mod_mending_moss",
+        "boomerang": "tconspartan:items/boomerang/mod_mending_moss",
+        "pike": "tconspartan:items/pike/mod_mending_moss",
+        "lance": "tconspartan:items/lance/mod_mending_moss",
+        "glaive": "tconspartan:items/glaive/mod_mending_moss",
+        "greatsword": "tconspartan:items/greatsword/mod_mending_moss",
+        "halberd": "tconspartan:items/halberd/mod_mending_moss",
+        "battle_axe": "tconspartan:items/battle_axe/mod_mending_moss",
+        "warhammer": "tconspartan:items/warhammer/mod_mending_moss",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_mending_moss",
+        "war_scythe": "tconspartan:items/war_scythe/mod_mending_moss"
+    }
+}

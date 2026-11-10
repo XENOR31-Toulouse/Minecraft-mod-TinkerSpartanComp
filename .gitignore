@@ -1,0 +1,22 @@
+# Gradle / RetroFuturaGradle
+.gradle/
+build/
+out/
+
+# Minecraft run directory (worlds, logs, config, copied Spartan jar)
+run/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+bin/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_glowing",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_glowing",
+        "katana": "tconspartan:items/katana/mod_glowing",
+        "saber": "tconspartan:items/saber/mod_glowing",
+        "spear": "tconspartan:items/spear/mod_glowing",
+        "mace": "tconspartan:items/mace/mod_glowing",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_glowing",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_glowing",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_glowing",
+        "javelin": "tconspartan:items/javelin/mod_glowing",
+        "boomerang": "tconspartan:items/boomerang/mod_glowing",
+        "pike": "tconspartan:items/pike/mod_glowing",
+        "lance": "tconspartan:items/lance/mod_glowing",
+        "glaive": "tconspartan:items/glaive/mod_glowing",
+        "greatsword": "tconspartan:items/greatsword/mod_glowing",
+        "halberd": "tconspartan:items/halberd/mod_glowing",
+        "battle_axe": "tconspartan:items/battle_axe/mod_glowing",
+        "warhammer": "tconspartan:items/warhammer/mod_glowing",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_glowing",
+        "war_scythe": "tconspartan:items/war_scythe/mod_glowing"
+    }
+}

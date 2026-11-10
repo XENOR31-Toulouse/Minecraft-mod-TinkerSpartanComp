@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_silktouch",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_silktouch",
+        "katana": "tconspartan:items/katana/mod_silktouch",
+        "saber": "tconspartan:items/saber/mod_silktouch",
+        "spear": "tconspartan:items/spear/mod_silktouch",
+        "mace": "tconspartan:items/mace/mod_silktouch",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_silktouch",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_silktouch",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_silktouch",
+        "javelin": "tconspartan:items/javelin/mod_silktouch",
+        "boomerang": "tconspartan:items/boomerang/mod_silktouch",
+        "pike": "tconspartan:items/pike/mod_silktouch",
+        "lance": "tconspartan:items/lance/mod_silktouch",
+        "glaive": "tconspartan:items/glaive/mod_silktouch",
+        "greatsword": "tconspartan:items/greatsword/mod_silktouch",
+        "halberd": "tconspartan:items/halberd/mod_silktouch",
+        "battle_axe": "tconspartan:items/battle_axe/mod_silktouch",
+        "warhammer": "tconspartan:items/warhammer/mod_silktouch",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_silktouch",
+        "war_scythe": "tconspartan:items/war_scythe/mod_silktouch"
+    }
+}

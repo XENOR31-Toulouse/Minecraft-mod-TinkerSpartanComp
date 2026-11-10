@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_sharpness",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_sharpness",
+        "katana": "tconspartan:items/katana/mod_sharpness",
+        "saber": "tconspartan:items/saber/mod_sharpness",
+        "spear": "tconspartan:items/spear/mod_sharpness",
+        "mace": "tconspartan:items/mace/mod_sharpness",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_sharpness",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_sharpness",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_sharpness",
+        "javelin": "tconspartan:items/javelin/mod_sharpness",
+        "boomerang": "tconspartan:items/boomerang/mod_sharpness",
+        "pike": "tconspartan:items/pike/mod_sharpness",
+        "lance": "tconspartan:items/lance/mod_sharpness",
+        "glaive": "tconspartan:items/glaive/mod_sharpness",
+        "greatsword": "tconspartan:items/greatsword/mod_sharpness",
+        "halberd": "tconspartan:items/halberd/mod_sharpness",
+        "battle_axe": "tconspartan:items/battle_axe/mod_sharpness",
+        "warhammer": "tconspartan:items/warhammer/mod_sharpness",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_sharpness",
+        "war_scythe": "tconspartan:items/war_scythe/mod_sharpness"
+    }
+}

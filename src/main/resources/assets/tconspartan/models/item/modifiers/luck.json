@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "dagger": "tconspartan:items/dagger/mod_luck",
+        "parrying_dagger": "tconspartan:items/parrying_dagger/mod_luck",
+        "katana": "tconspartan:items/katana/mod_luck",
+        "saber": "tconspartan:items/saber/mod_luck",
+        "spear": "tconspartan:items/spear/mod_luck",
+        "mace": "tconspartan:items/mace/mod_luck",
+        "quarterstaff": "tconspartan:items/quarterstaff/mod_luck",
+        "throwing_knife": "tconspartan:items/throwing_knife/mod_luck",
+        "throwing_axe": "tconspartan:items/throwing_axe/mod_luck",
+        "javelin": "tconspartan:items/javelin/mod_luck",
+        "boomerang": "tconspartan:items/boomerang/mod_luck",
+        "pike": "tconspartan:items/pike/mod_luck",
+        "lance": "tconspartan:items/lance/mod_luck",
+        "glaive": "tconspartan:items/glaive/mod_luck",
+        "greatsword": "tconspartan:items/greatsword/mod_luck",
+        "halberd": "tconspartan:items/halberd/mod_luck",
+        "battle_axe": "tconspartan:items/battle_axe/mod_luck",
+        "warhammer": "tconspartan:items/warhammer/mod_luck",
+        "battle_hammer": "tconspartan:items/battle_hammer/mod_luck",
+        "war_scythe": "tconspartan:items/war_scythe/mod_luck"
+    }
+}
