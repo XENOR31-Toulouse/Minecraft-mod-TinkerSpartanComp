@@ -1,0 +1,13 @@
+{
+  "tool": "caestus",
+  "text": [
+    {
+      "text": "L'arme la plus rapide de l'arsenal : des coups légers, mais les ennemis n'ont presque aucun répit."
+    }
+  ],
+  "properties": [
+    "Frappe rapide",
+    "Très rapide",
+    "Tool Station"
+  ]
+}

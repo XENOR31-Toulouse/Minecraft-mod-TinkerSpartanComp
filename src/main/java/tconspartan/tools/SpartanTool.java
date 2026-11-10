@@ -10,6 +10,7 @@ import com.oblivioussp.spartanweaponry.entity.projectile.EntityBoomerang;
 import com.oblivioussp.spartanweaponry.entity.projectile.EntityThrownWeapon;
 import com.oblivioussp.spartanweaponry.init.SoundRegistry;
 import com.oblivioussp.spartanweaponry.item.IBlockingWeapon;
+import com.oblivioussp.spartanweaponry.util.ConfigHandler;
 import com.oblivioussp.spartanweaponry.util.EntityDamageSourceArmorPiercing;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -164,6 +165,7 @@ public class SpartanTool extends SwordCore implements IWeaponPropertyContainer<S
 
         if (hit && !ToolHelper.isBroken(stack)) {
             sweepAttack(stack, attacker, target, damage);
+            quickStrike(target);
         }
         return hit;
     }
@@ -210,6 +212,18 @@ public class SpartanTool extends SwordCore implements IWeaponPropertyContainer<S
         player.world.playSound(null, player.posX, player.posY, player.posZ,
                 SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, player.getSoundCategory(), 1f, 1f);
         player.spawnSweepParticles();
+    }
+
+    /**
+     * Frappe rapide (Spartan, caestus) : la cible reste invulnérable bien moins longtemps après un coup, ce qui
+     * permet d'enchaîner. Même réglage que Spartan ({@code quickStrikeHurtResistTicks}, 14 ticks sur 20 par défaut).
+     */
+    private void quickStrike(Entity target) {
+        if (target instanceof EntityLivingBase && hasWeaponProperty(WeaponProperties.QUICK_STRIKE)) {
+            EntityLivingBase living = (EntityLivingBase) target;
+            int ticks = (int) (living.maxHurtResistantTime / 20.0 * ConfigHandler.quickStrikeHurtResistTicks);
+            living.hurtResistantTime = Math.min(living.hurtResistantTime, ticks);
+        }
     }
 
     private double getReach() {

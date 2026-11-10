@@ -23,6 +23,7 @@ below is unique (among these weapons and against Tinkers' own tools).
 | Throwing knife | tool rod | knife blade | — | Station | **thrown** ×2 |
 | Throwing axe | tool rod | axe head | — | Station | **thrown** ×2 |
 | Javelin | tough rod | arrow head | — | Station | **thrown** ×3 |
+| Caestus | binding | hand guard | — | Station | **quick strike** (very fast, little invulnerability), 3D glove in hand |
 | Boomerang | tool rod | kama head | — | Station | **thrown**, comes back |
 | Pike | tough rod | sword blade | tough binding | Forge | two-handed I, reach II |
 | Lance | tough rod | sword blade | large plate | Forge | reach, riding bonus |
@@ -39,7 +40,10 @@ Longsword and rapier are left out: Tinkers already has them. So are bows and cro
 ### How it works
 - The tools implement Spartan's `IWeaponPropertyContainer` and `IBlockingWeapon`: **Spartan itself**
   applies reach, melee bonus/penalty damage and parrying.
-- Sweep, armour piercing, shield breach and property callbacks are handled in `SpartanTool`.
+- Sweep, armour piercing, shield breach, quick strike and property callbacks are handled in `SpartanTool`.
+- **3D in hand** (`client/HeldModels`): the caestus keeps its flat Tinkers icon (with modifiers) in
+  inventories, but in hand and on the ground it shows Spartan's 3D glove, retextured per material: the
+  leather takes the binding's material, the studs and plate take the hand guard's.
 - **Throwing** (hold right-click, release): the projectiles subclass Spartan's (`throwing/ThrownTools`),
   reusing its flight, rendering, pickup and boomerang return. On impact, the Tinkers logic applies (traits,
   durability: the weapon becomes "broken" instead of disappearing), plus Spartan's bonuses.

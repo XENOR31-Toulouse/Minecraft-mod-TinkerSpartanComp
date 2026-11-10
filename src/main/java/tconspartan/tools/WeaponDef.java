@@ -45,6 +45,16 @@ public final class WeaponDef {
     int plateU = 99;
     Integer handleT;
 
+    /**
+     * Arme sans calques « custom » dans Spartan (le caestus) : sprite Spartan à découper par saturation
+     * (métal gris = tête, cuir coloré = manche), retourné horizontalement pour suivre l'axe des autres armes.
+     */
+    String flatSprite;
+
+    /** Modèle 3D Spartan affiché en main (ex. "item/caestus") et sa texture UV (ex. "items/caestus_studded_model"). */
+    String heldModel;
+    String heldModelTexture;
+
     private WeaponDef(String spartanName) {
         this.spartanName = spartanName;
     }
@@ -133,6 +143,22 @@ public final class WeaponDef {
     /** Pixels du manche Spartan éloignés de l'axe ({@code |u| > minU}) attribués à la 3e pièce (ex. garde de lance). */
     WeaponDef plate(int minU) {
         this.plateU = minU;
+        return this;
+    }
+
+    /**
+     * En main et au sol, affiche le modèle 3D de Spartan au lieu de l'icône plate, recoloré selon les matériaux
+     * (la texture UV est découpée en cuir / métal par saturation, comme l'icône). Voir client.HeldModels.
+     */
+    WeaponDef held3d(String spartanModel, String spartanTexture) {
+        this.heldModel = spartanModel;
+        this.heldModelTexture = spartanTexture;
+        return this;
+    }
+
+    /** Texture Spartan d'une seule pièce (ex. "items/caestus_studded"), découpée par saturation. */
+    WeaponDef flat(String spartanTexture) {
+        this.flatSprite = spartanTexture;
         return this;
     }
 

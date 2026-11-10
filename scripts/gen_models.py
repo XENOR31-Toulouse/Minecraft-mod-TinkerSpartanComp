@@ -29,6 +29,7 @@ WEAPONS = {
     "throwing_knife": ("throwing_knife", False),
     "throwing_axe": ("throwing_axe", False),
     "javelin": ("javelin", False),
+    "caestus": ("caestus", False),
     "boomerang": ("boomerang", False),
     "pike": ("pike", True),
     "lance": ("lance", True),
@@ -43,6 +44,9 @@ WEAPONS = {
 
 # Armes dont les modèles Spartan portent un autre nom que leurs textures "custom"
 MODEL_ALIASES = {"quarterstaff": "staff"}
+
+# Armes dont le modèle Spartan est en 3D (on garde les transformations par défaut d'un objet tenu en main)
+NO_SPARTAN_DISPLAY = {"caestus"}
 
 # Doit correspondre à SpartanTextures.MODIFIERS
 MODIFIERS = [
@@ -95,7 +99,7 @@ def main() -> None:
 
     for tool, (spartan, has_extra) in WEAPONS.items():
         display = dict(DEFAULT_DISPLAY)
-        spartan_part = spartan_display(jar, spartan)
+        spartan_part = {} if spartan in NO_SPARTAN_DISPLAY else spartan_display(jar, spartan)
         display.update(spartan_part)
         textures = {
             "layer0": f"{MODID}:items/{tool}/handle",

@@ -19,6 +19,8 @@ item.tconspartan.throwing_axe.name=Throwing Axe
 item.tconspartan.throwing_axe.desc=A stack of heavy throwing axes: their number depends on the materials.\nHold right-click and release to throw one.
 item.tconspartan.javelin.name=Javelin
 item.tconspartan.javelin.desc=A bundle of javelins that deal heavy damage when thrown.\nHold right-click and release to throw one.
+item.tconspartan.caestus.name=Caestus
+item.tconspartan.caestus.desc=A studded combat glove for a flurry of quick blows.\nEnemies barely recover between hits.
 item.tconspartan.boomerang.name=Boomerang
 item.tconspartan.boomerang.desc=Hold right-click and release to throw it:\nit flies back to you after hitting something.
 item.tconspartan.pike.name=Pike
@@ -39,6 +41,10 @@ item.tconspartan.battle_hammer.name=Battle Hammer
 item.tconspartan.battle_hammer.desc=A slow, crushing hammer.\nKnocks enemies back and leaves them dazed.
 item.tconspartan.war_scythe.name=War Scythe
 item.tconspartan.war_scythe.desc=A reaping weapon with a wide sweep.\nHits harder against foes without a helmet.
+
+# Weapons
+
+# Weapons
 
 # Weapons
 

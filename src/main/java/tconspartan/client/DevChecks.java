@@ -110,13 +110,62 @@ public final class DevChecks {
                 log("FAIL: exception {}", e.toString());
                 TConSpartan.LOG.error("[check]", e);
             }
-            bookStep = 0;
-            bookTimer = 40;
+            heldStep = 0;
+            heldTimer = 40;
             return;
         }
-        if (bookStep >= 0) {
+        if (heldStep >= 0) {
+            heldScreenshots(mc);
+        } else if (bookStep >= 0) {
             bookScreenshots(mc);
         }
+    }
+
+    private int heldStep = -1;
+    private int heldTimer;
+
+    /**
+     * Captures du caestus tenu en main (modèle 3D) : vue à la première personne, puis à la troisième personne de
+     * face. L'objet est placé dans la barre d'action côté client seulement, pour l'affichage.
+     */
+    private void heldScreenshots(Minecraft mc) {
+        if (--heldTimer > 0) {
+            return;
+        }
+        // Pas de menu pause (fenêtre sans focus pendant le test) et un éclairage lisible.
+        mc.gameSettings.pauseOnLostFocus = false;
+        mc.gameSettings.gammaSetting = 1f;
+        if (mc.currentScreen != null) {
+            mc.displayGuiScreen(null);
+            heldTimer = 15;
+            return;
+        }
+        switch (heldStep) {
+            case 0:
+                ItemStack caestus = build(SpartanWeapon.CAESTUS, mat("wood"), mat("cobalt"), mat("cobalt"));
+                mc.player.inventory.currentItem = 0;
+                mc.player.inventory.setInventorySlotContents(0, caestus);
+                mc.player.rotationPitch = 10f;
+                mc.gameSettings.thirdPersonView = 0;
+                heldTimer = 30;
+                break;
+            case 1:
+                ScreenShotHelper.saveScreenshot(mc.gameDir, "tconspartan-held-1st.png", mc.displayWidth, mc.displayHeight, mc.getFramebuffer());
+                mc.gameSettings.thirdPersonView = 2;
+                heldTimer = 30;
+                break;
+            case 2:
+                ScreenShotHelper.saveScreenshot(mc.gameDir, "tconspartan-held-3rd.png", mc.displayWidth, mc.displayHeight, mc.getFramebuffer());
+                mc.gameSettings.thirdPersonView = 0;
+                log("held: screenshots done ({})", mc.player.getHeldItemMainhand().getDisplayName());
+                heldStep = -1;
+                bookStep = 0;
+                bookTimer = 20;
+                return;
+            default:
+                return;
+        }
+        heldStep++;
     }
 
     private static Material mat(String id) {

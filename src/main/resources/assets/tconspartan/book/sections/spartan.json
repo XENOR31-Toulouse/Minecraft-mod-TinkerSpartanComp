@@ -75,6 +75,11 @@
     "data": "spartan/javelin.json"
   },
   {
+    "name": "caestus",
+    "type": "tool",
+    "data": "spartan/caestus.json"
+  },
+  {
     "name": "boomerang",
     "type": "tool",
     "data": "spartan/boomerang.json"

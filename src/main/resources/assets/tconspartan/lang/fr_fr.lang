@@ -19,6 +19,8 @@ item.tconspartan.throwing_axe.name=Hache de lancer
 item.tconspartan.throwing_axe.desc=Une pile de lourdes haches de lancer : leur nombre dépend des matériaux.\nMaintenez clic droit puis relâchez pour en lancer une.
 item.tconspartan.javelin.name=Javelot
 item.tconspartan.javelin.desc=Un lot de javelots aux lourds dégâts en lancer.\nMaintenez clic droit puis relâchez pour en lancer un.
+item.tconspartan.caestus.name=Caestus
+item.tconspartan.caestus.desc=Un gant de combat clouté pour une pluie de coups rapides.\nLes ennemis n'ont presque pas de répit entre deux coups.
 item.tconspartan.boomerang.name=Boomerang
 item.tconspartan.boomerang.desc=Maintenez clic droit puis relâchez pour le lancer :\nil vous revient après avoir touché quelque chose.
 item.tconspartan.pike.name=Pique
@@ -39,6 +41,10 @@ item.tconspartan.battle_hammer.name=Marteau de bataille
 item.tconspartan.battle_hammer.desc=Un marteau lent et écrasant.\nRepousse les ennemis et les laisse étourdis.
 item.tconspartan.war_scythe.name=Faux de guerre
 item.tconspartan.war_scythe.desc=Une arme de moisson au large balayage.\nFrappe plus fort les ennemis sans casque.
+
+# Armes
+
+# Armes
 
 # Armes
 

@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import slimeknights.tconstruct.library.TinkerRegistry;
+import slimeknights.tconstruct.library.client.CustomTextureCreator;
 import slimeknights.tconstruct.library.modifiers.IModifier;
 import slimeknights.tconstruct.library.modifiers.IModifierDisplay;
 import tconspartan.TConSpartan;
@@ -74,7 +75,86 @@ public final class SpartanTextures {
                 add(map, weapon, "mod_" + modifier, new WeaponSprite(sprite(weapon, "mod_" + modifier), weapon, sources,
                         NONE, i, modifierColor(modifier), modifier));
             }
+            if (weapon.heldModel() != null) {
+                // Textures du modèle 3D tenu en main : cuir et métal, que Tinkers recolore pour chaque matériau.
+                ResourceLocation source = new ResourceLocation("spartanweaponry", weapon.heldModelTexture());
+                for (boolean metal : new boolean[]{false, true}) {
+                    String name = heldTexture(weapon, metal);
+                    map.setTextureEntry(new SplitSprite(name, source, metal));
+                    CustomTextureCreator.registerTexture(new ResourceLocation(name));
+                }
+            }
         }
+    }
+
+    /** Texture grise du modèle 3D : la partie métal (tête) ou cuir (manche). Tinkers en crée une par matériau. */
+    public static String heldTexture(SpartanWeapon weapon, boolean metal) {
+        return sprite(weapon, metal ? "held_metal" : "held_strap");
+    }
+
+    /** Partie d'une texture Spartan, choisie par saturation (gris = métal, coloré = cuir), passée en gris. */
+    private static final class SplitSprite extends TextureAtlasSprite {
+        private final ResourceLocation source;
+        private final boolean metal;
+
+        SplitSprite(String name, ResourceLocation source, boolean metal) {
+            super(name);
+            this.source = source;
+            this.metal = metal;
+        }
+
+        @Override
+        public Collection<ResourceLocation> getDependencies() {
+            return Collections.singletonList(source);
+        }
+
+        @Override
+        public boolean hasCustomLoader(IResourceManager manager, ResourceLocation location) {
+            return true;
+        }
+
+        @Override
+        public boolean load(IResourceManager manager, ResourceLocation location,
+                            Function<ResourceLocation, TextureAtlasSprite> textureGetter) {
+            TextureAtlasSprite base = textureGetter.apply(source);
+            if (base == null || base.getFrameCount() == 0) {
+                TConSpartan.LOG.error("Texture Spartan introuvable : {}", source);
+                return true;
+            }
+            int[] src = base.getFrameTextureData(0)[0];
+            int[] out = new int[src.length];
+            int min = 255;
+            int max = 0;
+            for (int i = 0; i < src.length; i++) {
+                if (alpha(src[i]) > 0 && isMetal(src[i]) == metal) {
+                    min = Math.min(min, luminance(src[i]));
+                    max = Math.max(max, luminance(src[i]));
+                }
+            }
+            for (int i = 0; i < src.length; i++) {
+                if (alpha(src[i]) > 0 && isMetal(src[i]) == metal) {
+                    int v = max > min ? 60 + (luminance(src[i]) - min) * 160 / (max - min) : 150;
+                    out[i] = (alpha(src[i]) << 24) | (v << 16) | (v << 8) | v;
+                }
+            }
+            copyFrom(base);
+            int[][] levels = new int[base.getFrameTextureData(0).length][];
+            levels[0] = out;
+            List<int[][]> frames = new ArrayList<>();
+            frames.add(levels);
+            setFramesTextureData(frames);
+            return false;
+        }
+    }
+
+    /** Pixel « métal » : peu saturé (gris, blanc, noir) ; le cuir et le bois sont colorés. */
+    static boolean isMetal(int argb) {
+        int r = (argb >> 16) & 0xFF;
+        int g = (argb >> 8) & 0xFF;
+        int b = argb & 0xFF;
+        int max = Math.max(r, Math.max(g, b));
+        int min = Math.min(r, Math.min(g, b));
+        return max == 0 || (float) (max - min) / max < 0.3f;
     }
 
     /**
@@ -110,6 +190,13 @@ public final class SpartanTextures {
         final ResourceLocation shine;
 
         Sources(SpartanWeapon weapon) {
+            if (weapon.flatSprite() != null) {
+                // Une seule image Spartan (caestus), découpée par saturation dans Geometry.
+                handle = null;
+                head = new ResourceLocation("spartanweaponry", weapon.flatSprite());
+                shine = null;
+                return;
+            }
             handle = existing(weapon, 0);
             head = new ResourceLocation("spartanweaponry", "items/custom/" + weapon.spartanName() + "_layer_1");
             shine = existing(weapon, 2);
@@ -258,6 +345,11 @@ public final class SpartanTextures {
             role = new int[n];
             fromHandleLayer = new boolean[n];
 
+            if (w.flatSprite() != null) {
+                buildFlat(head);
+                return;
+            }
+
             int[] headShine = head.clone();
             if (shine != null) {
                 blendOver(headShine, shine);
@@ -287,20 +379,58 @@ public final class SpartanTextures {
             greyscaleHandleLayer();
         }
 
+        /**
+         * Image Spartan d'une seule pièce (caestus) : retournée horizontalement (poignet en bas à gauche, poing en
+         * haut à droite, comme les autres armes), puis découpée par saturation : le métal (gris) devient la tête,
+         * le cuir (coloré) le manche. Chaque groupe est passé en gris séparément.
+         */
+        private void buildFlat(int[] src) {
+            boolean[] metal = new boolean[composite.length];
+            for (int i = 0; i < composite.length; i++) {
+                int x = i % size;
+                int y = i / size;
+                int pixel = src[y * size + (size - 1 - x)];
+                if (alpha(pixel) == 0) {
+                    continue;
+                }
+                composite[i] = pixel;
+                int r = (pixel >> 16) & 0xFF;
+                int g = (pixel >> 8) & 0xFF;
+                int b = pixel & 0xFF;
+                int max = Math.max(r, Math.max(g, b));
+                int min = Math.min(r, Math.min(g, b));
+                float saturation = max == 0 ? 0f : (float) (max - min) / max;
+                if (saturation < 0.3f) {
+                    role[i] = HEAD;
+                    metal[i] = true;
+                } else {
+                    role[i] = HANDLE;
+                    fromHandleLayer[i] = true;
+                }
+            }
+            greyscale(fromHandleLayer);
+            greyscale(metal);
+        }
+
         /** Le calque manche de Spartan est coloré : on le passe en gris, contraste étiré comme les textures Tinkers. */
         private void greyscaleHandleLayer() {
+            greyscale(fromHandleLayer);
+        }
+
+        /** Passe en niveaux de gris les pixels du masque, contraste étiré entre 60 et 220. */
+        private void greyscale(boolean[] mask) {
             int min = 255;
             int max = 0;
             int[] lum = new int[composite.length];
             for (int i = 0; i < composite.length; i++) {
-                if (fromHandleLayer[i]) {
+                if (mask[i]) {
                     lum[i] = luminance(composite[i]);
                     min = Math.min(min, lum[i]);
                     max = Math.max(max, lum[i]);
                 }
             }
             for (int i = 0; i < composite.length; i++) {
-                if (fromHandleLayer[i]) {
+                if (mask[i]) {
                     int v = max > min ? 60 + (lum[i] - min) * 160 / (max - min) : 150;
                     composite[i] = (alpha(composite[i]) << 24) | (v << 16) | (v << 8) | v;
                 }

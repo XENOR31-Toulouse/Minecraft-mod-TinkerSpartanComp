@@ -6,6 +6,7 @@ import com.oblivioussp.spartanweaponry.client.render.projectile.RenderFactoryThr
 import com.oblivioussp.spartanweaponry.client.render.projectile.RenderFactoryThrownJavelin;
 import com.oblivioussp.spartanweaponry.client.render.projectile.RenderFactoryThrownWeapon;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -18,6 +19,7 @@ import slimeknights.tconstruct.library.client.ToolBuildGuiInfo;
 import slimeknights.tconstruct.library.client.model.ModifierModelLoader;
 import tconspartan.TConSpartan;
 import tconspartan.client.DevChecks;
+import tconspartan.client.HeldModels;
 import tconspartan.client.SpartanBook;
 import tconspartan.client.SpartanTextures;
 import tconspartan.throwing.ThrownTools;
@@ -84,6 +86,12 @@ public class ClientProxy extends CommonProxy {
         } catch (ReflectiveOperationException | ClassCastException e) {
             TConSpartan.LOG.error("Impossible d'enregistrer les rendus de modificateurs", e);
         }
+    }
+
+    /** Armes en 3D en main (caestus) : on enveloppe leur modèle Tinkers. */
+    @SubscribeEvent
+    public static void bakeModels(ModelBakeEvent event) {
+        HeldModels.onModelBake(event);
     }
 
     @SubscribeEvent

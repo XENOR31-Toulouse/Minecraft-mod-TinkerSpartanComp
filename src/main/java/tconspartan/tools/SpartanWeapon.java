@@ -53,6 +53,11 @@ public enum SpartanWeapon {
     JAVELIN(WeaponDef.of("javelin").handle(TOUGH_ROD).head(ARROW_HEAD)
             .stats(0.3f, 1.2, 1.0f, 15f).throwing(ThrowType.JAVELIN).ammo(58)
             .props(THROWABLE, EXTRA_DAMAGE_3_THROWN)),
+    // Gant de combat : très rapide, peu de dégâts par coup, « frappe rapide » (presque pas d'invulnérabilité).
+    CAESTUS(WeaponDef.of("caestus").handle(BINDING).head(HAND_GUARD).flat("items/caestus_studded")
+            .held3d("item/caestus", "items/caestus_studded_model")
+            .stats(0.4f, 3.5, 1.0f, 12f)
+            .props(QUICK_STRIKE)),
     BOOMERANG(WeaponDef.of("boomerang").handle(ROD).head(KAMA_HEAD)
             // Faible en mêlée (comme dans Spartan) : ses dégâts viennent du lancer (x1.7 -> ~6 en fer).
             .stats(0.5f, 1.4, 1.0f, 15f).throwing(ThrowType.BOOMERANG)
@@ -138,6 +143,15 @@ public enum SpartanWeapon {
     public int guardK() { return def.guardK; }
     public int plateU() { return def.plateU; }
     public Integer handleT() { return def.handleT; }
+
+    /** Texture Spartan d'une seule pièce à découper par saturation, ou null (calques « custom »). */
+    public String flatSprite() { return def.flatSprite; }
+
+    /** Modèle 3D Spartan à afficher en main, ou null. */
+    public String heldModel() { return def.heldModel; }
+
+    /** Texture UV du modèle 3D Spartan, ou null. */
+    public String heldModelTexture() { return def.heldModelTexture; }
 
     public ToolPart part(int index) {
         return def.parts.get(index).part.get();

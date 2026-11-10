@@ -87,6 +87,14 @@ W = {
         "Chargez le lancer : le javelot vole loin et inflige le triple de dégâts. Peu nombreux, mais dévastateurs.",
         ["Thrown: x3 damage", "Ammo from materials"],
         ["Lancé : dégâts x3", "Munitions : matériaux"]),
+    "caestus": (
+        "Caestus", "Caestus",
+        "A studded combat glove for a flurry of quick blows.\\nEnemies barely recover between hits.",
+        "Un gant de combat clouté pour une pluie de coups rapides.\\nLes ennemis n'ont presque pas de répit entre deux coups.",
+        "The fastest weapon in the arsenal: light blows, but enemies barely recover between them.",
+        "L'arme la plus rapide de l'arsenal : des coups légers, mais les ennemis n'ont presque aucun répit.",
+        ["Quick strike", "Very fast"],
+        ["Frappe rapide", "Très rapide"]),
     "boomerang": (
         "Boomerang", "Boomerang",
         "Hold right-click and release to throw it:\\nit flies back to you after hitting something.",
@@ -169,7 +177,7 @@ W = {
         ["Large balayage", "x2 sans casque", "À deux mains (II)"]),
 }
 ORDER = ["dagger", "parrying_dagger", "katana", "saber", "spear", "mace", "quarterstaff", "throwing_knife",
-         "throwing_axe", "javelin", "boomerang", "pike", "lance", "glaive", "greatsword", "halberd", "battle_axe",
+         "throwing_axe", "javelin", "caestus", "boomerang", "pike", "lance", "glaive", "greatsword", "halberd", "battle_axe",
          "warhammer", "battle_hammer", "war_scythe"]
 FORGE = {"pike", "lance", "glaive", "greatsword", "halberd", "battle_axe", "warhammer", "battle_hammer", "war_scythe"}
 
@@ -220,14 +228,16 @@ TEXT_PAGES = {
             t("Bonus damage", color="dark_blue"), t(": extra damage in specific cases: from behind, against undead, while riding, or against enemies missing a chestplate or helmet."), NL,
             t("Damage absorb", color="dark_blue"), t(": while held, reduces the melee damage you take."), NL,
             t("Parry", color="dark_blue"), t(": hold right-click to turn aside melee attacks."), NL,
-            t("Versatile", color="dark_blue"), t(": also works as an axe."), NL, NL,
+            t("Versatile", color="dark_blue"), t(": also works as an axe."), NL,
+            t("Quick strike", color="dark_blue"), t(": enemies barely recover between hits."), NL, NL,
             t("Hold "), t("Shift"), t(" over a weapon to read the details of its properties."),
         ]),
         ("Propriétés (2)", [
             t("Dégâts bonus", color="dark_blue"), t(" : dégâts en plus dans certains cas : dans le dos, contre les morts-vivants, à cheval, ou contre les ennemis sans plastron ou sans casque."), NL,
             t("Absorption", color="dark_blue"), t(" : tenue en main, réduit les dégâts de mêlée reçus."), NL,
             t("Parade", color="dark_blue"), t(" : maintenez clic droit pour détourner les attaques de mêlée."), NL,
-            t("Polyvalente", color="dark_blue"), t(" : sert aussi de hache."), NL, NL,
+            t("Polyvalente", color="dark_blue"), t(" : sert aussi de hache."), NL,
+            t("Frappe rapide", color="dark_blue"), t(" : les ennemis n'ont presque pas de répit entre deux coups."), NL, NL,
             t("Maintenez "), t("Maj"), t(" sur une arme pour lire le détail de ses propriétés."),
         ])),
     "throwing": (
