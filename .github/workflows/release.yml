@@ -1,0 +1,46 @@
+# Publie une release GitHub avec le jar du mod à chaque tag de version.
+#   git tag v0.2.0 && git push origin v0.2.0
+# La version du jar vient du tag (v0.2.0 -> tconspartan-0.2.0.jar). Les notes de version sont lues dans
+# .github/release-notes/<tag>.md si le fichier existe, sinon GitHub les génère depuis les commits.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # JDK 8 pour compiler (Minecraft 1.12.2), JDK 25 pour Gradle / RetroFuturaGradle.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: |
+            8
+            25
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          ./gradlew assemble --no-daemon -Pmod_version="$VERSION" \
+            -Porg.gradle.java.installations.fromEnv=JAVA_HOME_8_X64,JAVA_HOME_25_X64
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          JAR="build/libs/tconspartan-${VERSION}.jar"
+          test -f "$JAR"
+          NOTES=".github/release-notes/${GITHUB_REF_NAME}.md"
+          if [ -f "$NOTES" ]; then NOTES_ARG=(--notes-file "$NOTES"); else NOTES_ARG=(--generate-notes); fi
+          gh release create "$GITHUB_REF_NAME" "$JAR" \
+            --title "Tinkers' Spartan ${VERSION} (MC 1.12.2)" "${NOTES_ARG[@]}"

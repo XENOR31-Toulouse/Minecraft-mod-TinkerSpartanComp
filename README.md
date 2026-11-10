@@ -6,6 +6,12 @@ Built and tested against **[Tinkers' Antique](https://www.curseforge.com/minecra
 (the maintained 1.12.2 fork of Tinkers' Construct: same mod id `tconstruct`, same API), with Mantle and
 Spartan Weaponry 1.6.1. The API it uses is the same in the original Tinkers' Construct 2.13.
 
+**Download**: the jar is on the [Releases](https://github.com/XENOR31-Toulouse/Minecraft-mod-TinkerSpartanComp/releases)
+page. Put it in `mods` with Tinkers' Antique, Mantle and Spartan Weaponry 1.6.1.
+
+To publish a new version: add `.github/release-notes/vX.Y.Z.md` (optional), then
+`git tag vX.Y.Z && git push origin vX.Y.Z`. GitHub Actions builds the jar and creates the release.
+
 ## Weapons: built only from existing Tinkers parts
 
 The Tool Station matches parts **in slot order** and builds the first tool that fits, so every combination
