@@ -45,6 +45,9 @@ public final class WeaponDef {
     int plateU = 99;
     Integer handleT;
 
+    /** Outil Tinkers dont on reprend les dessins de modificateurs (voir client.OverlayTransfer). */
+    String overlayLook = "broadsword";
+
     private WeaponDef(String spartanName) {
         this.spartanName = spartanName;
     }
@@ -133,6 +136,15 @@ public final class WeaponDef {
     /** Pixels du manche Spartan éloignés de l'axe ({@code |u| > minU}) attribués à la 3e pièce (ex. garde de lance). */
     WeaponDef plate(int minU) {
         this.plateU = minU;
+        return this;
+    }
+
+    /**
+     * Outil Tinkers le plus proche (broadsword, rapier, hatchet, hammer, pickaxe, scythe, kama) : ses rendus
+     * de modificateurs, dessinés à la main, sont transférés sur l'arme.
+     */
+    WeaponDef look(String tinkersTool) {
+        this.overlayLook = tinkersTool;
         return this;
     }
 

@@ -13,6 +13,9 @@ import slimeknights.tconstruct.library.modifiers.IModifierDisplay;
 import tconspartan.TConSpartan;
 import tconspartan.tools.SpartanWeapon;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,19 +55,41 @@ public final class SpartanTextures {
     private SpartanTextures() {
     }
 
+    /**
+     * Option de développement : {@code -Dtconspartan.dumpTextures=true} écrit chaque texture générée dans
+     * {@code <dossier du jeu>/tconspartan-textures/}, comme point de départ pour des textures dessinées à la main.
+     */
+    private static final boolean DUMP = Boolean.getBoolean("tconspartan.dumpTextures");
+
     public static void register(TextureMap map) {
+        OverlayTransfer.clearCache();
         for (SpartanWeapon weapon : SpartanWeapon.values()) {
             Sources sources = new Sources(weapon);
-            map.setTextureEntry(new WeaponSprite(sprite(weapon, "handle"), weapon, sources, HANDLE, -1, 0));
-            map.setTextureEntry(new WeaponSprite(sprite(weapon, "head"), weapon, sources, HEAD, -1, 0));
+            add(map, weapon, "handle", new WeaponSprite(sprite(weapon, "handle"), weapon, sources, HANDLE, -1, 0, null));
+            add(map, weapon, "head", new WeaponSprite(sprite(weapon, "head"), weapon, sources, HEAD, -1, 0, null));
             if (weapon.hasExtraPart()) {
-                map.setTextureEntry(new WeaponSprite(sprite(weapon, "extra"), weapon, sources, EXTRA, -1, 0));
+                add(map, weapon, "extra", new WeaponSprite(sprite(weapon, "extra"), weapon, sources, EXTRA, -1, 0, null));
             }
             for (int i = 0; i < MODIFIERS.size(); i++) {
                 String modifier = MODIFIERS.get(i);
-                map.setTextureEntry(new WeaponSprite(sprite(weapon, "mod_" + modifier), weapon, sources, NONE, i,
-                        modifierColor(modifier)));
+                OverlayTransfer.Source drawing = OverlayTransfer.resolve(weapon.overlayLook(), modifier);
+                add(map, weapon, "mod_" + modifier, new WeaponSprite(sprite(weapon, "mod_" + modifier), weapon, sources,
+                        NONE, i, modifierColor(modifier), drawing));
             }
+        }
+    }
+
+    /**
+     * Une texture dessinée à la main ({@code assets/tconspartan/textures/items/<arme>/<calque>.png}, dans le mod ou
+     * dans un resource pack) remplace la texture générée : on laisse alors Minecraft la charger normalement.
+     */
+    private static void add(TextureMap map, SpartanWeapon weapon, String layer, WeaponSprite generated) {
+        ResourceLocation png = new ResourceLocation(TConSpartan.MODID, "textures/items/" + weapon.id() + "/" + layer + ".png");
+        try {
+            Minecraft.getMinecraft().getResourceManager().getResource(png);
+            return; // texture fournie : pas de génération
+        } catch (IOException e) {
+            map.setTextureEntry(generated);
         }
     }
 
@@ -123,19 +148,27 @@ public final class SpartanTextures {
         private final int part;
         private final int modifierIndex;
         private final int modifierColor;
+        /** Dessin Tinkers du modificateur à transférer (null : point de couleur de secours). */
+        private final OverlayTransfer.Source drawing;
 
-        WeaponSprite(String name, SpartanWeapon weapon, Sources sources, int part, int modifierIndex, int modifierColor) {
+        WeaponSprite(String name, SpartanWeapon weapon, Sources sources, int part, int modifierIndex, int modifierColor,
+                     OverlayTransfer.Source drawing) {
             super(name);
             this.weapon = weapon;
             this.sources = sources;
             this.part = part;
             this.modifierIndex = modifierIndex;
             this.modifierColor = modifierColor;
+            this.drawing = drawing;
         }
 
         @Override
         public Collection<ResourceLocation> getDependencies() {
-            return sources.all();
+            List<ResourceLocation> all = sources.all();
+            if (drawing != null) {
+                all.addAll(drawing.textures());
+            }
+            return all;
         }
 
         @Override
@@ -155,7 +188,18 @@ public final class SpartanTextures {
             Geometry geo = new Geometry(weapon, size, pixels(head, size),
                     pixels(get(textureGetter, sources.handle), size), pixels(get(textureGetter, sources.shine), size));
 
-            int[] out = modifierIndex >= 0 ? geo.modifierOverlay(modifierIndex, modifierColor) : geo.layer(part);
+            int[] out;
+            if (modifierIndex < 0) {
+                out = geo.layer(part);
+            } else {
+                out = drawing != null ? transferDrawing(geo, textureGetter) : null;
+                if (out == null || isEmpty(out)) {
+                    out = geo.modifierOverlay(modifierIndex, modifierColor); // secours : point de couleur
+                }
+            }
+            if (DUMP) {
+                dump(out, size);
+            }
 
             copyFrom(head);
             // Tableau couvrant tous les niveaux de mipmap (seul le niveau 0 est rempli, comme Tinkers).
@@ -165,6 +209,51 @@ public final class SpartanTextures {
             frames.add(levels);
             setFramesTextureData(frames);
             return false;
+        }
+
+        /** Dessin du modificateur sur l'outil Tinkers de référence, transféré sur notre arme. */
+        private int[] transferDrawing(Geometry geo, Function<ResourceLocation, TextureAtlasSprite> getter) {
+            TextureAtlasSprite overlay = getter.apply(drawing.overlay);
+            if (overlay == null || overlay.getFrameCount() == 0) {
+                return null;
+            }
+            int refSize = overlay.getIconWidth();
+            int[] overlayPixels = pixels(overlay, refSize);
+            List<int[]> layers = new ArrayList<>();
+            for (ResourceLocation layer : drawing.layers) {
+                int[] px = pixels(getter.apply(layer), refSize);
+                if (px == null) {
+                    return null;
+                }
+                layers.add(px);
+            }
+            if (overlayPixels == null) {
+                return null;
+            }
+            OverlayTransfer.Geo ref = OverlayTransfer.Geo.ofLayers(refSize, layers, drawing.roles);
+            return OverlayTransfer.transfer(ref, overlayPixels, geo.asTransferGeo());
+        }
+
+        private static boolean isEmpty(int[] pixels) {
+            for (int p : pixels) {
+                if (p >>> 24 != 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void dump(int[] pixels, int size) {
+            try {
+                BufferedImage image = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
+                image.setRGB(0, 0, size, size, pixels, 0, size);
+                String name = getIconName().substring(getIconName().indexOf("items/") + "items/".length());
+                File file = new File(Minecraft.getMinecraft().gameDir, "tconspartan-textures/" + name + ".png");
+                file.getParentFile().mkdirs();
+                ImageIO.write(image, "png", file);
+            } catch (IOException e) {
+                TConSpartan.LOG.warn("Impossible d'écrire {}", getIconName(), e);
+            }
         }
 
         private static TextureAtlasSprite get(Function<ResourceLocation, TextureAtlasSprite> getter, ResourceLocation rl) {
@@ -246,6 +335,15 @@ public final class SpartanTextures {
             }
         }
 
+        /** Rôles et luminosités pour {@link OverlayTransfer} (mêmes constantes de rôle). */
+        OverlayTransfer.Geo asTransferGeo() {
+            int[] lum = new int[composite.length];
+            for (int i = 0; i < lum.length; i++) {
+                lum[i] = role[i] != NONE ? luminance(composite[i]) : 0;
+            }
+            return new OverlayTransfer.Geo(size, role.clone(), lum);
+        }
+
         int[] layer(int wanted) {
             int[] out = new int[composite.length];
             for (int i = 0; i < out.length; i++) {
@@ -317,7 +415,7 @@ public final class SpartanTextures {
     }
 
     /** Luminosité perçue, même formule que Tinkers (AbstractColoredTexture). */
-    private static int luminance(int argb) {
+    static int luminance(int argb) {
         double r = ((argb >> 16) & 0xFF) / 255.0;
         double g = ((argb >> 8) & 0xFF) / 255.0;
         double b = (argb & 0xFF) / 255.0;

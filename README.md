@@ -64,8 +64,23 @@ Longsword and rapier are left out: Tinkers already has them. So are bows and cro
 - **guard/binding**: its own layer, coloured by its material. The pixels are chosen by the `guard(...)`,
   `plate(...)` and `handleBelow(...)` parameters in `SpartanWeapon`, in a frame where t = x - y runs along the
   weapon and u = x + y - (size - 1) is the offset from the axis;
-- **modifier overlays**: a dot in the modifier's colour on the head, one position per modifier (21
-  modifiers, files `models/item/modifiers/*.json`).
+- **modifier overlays** (`client/OverlayTransfer`): the **hand-drawn art from Tinkers' Construct** is
+  transferred from the closest Tinkers tool (`look(...)` in `SpartanWeapon`: broadsword, rapier, hatchet,
+  hammer, pickaxe, scythe, kama). Two cases are detected automatically:
+  - *coating* (diamond, silk touch, beheading, fiery, reinforced...): the colours are learned by brightness
+    band on the Tinkers tool, then reapplied to the weapon's head over the same zone;
+  - *decorations* (haste gem, emerald, luck lapis, smite ring, cobwebs...): each group of pixels is moved
+    to the same relative spot on the matching part (handle, head, guard).
+
+  If Tinkers has no art for a modifier, a dot in its colour is used as a fallback.
+
+### Hand-drawn textures (for artists)
+- Any PNG at `assets/tconspartan/textures/items/<weapon>/<layer>.png` (in the mod **or in a resource pack**)
+  **replaces** the generated texture. Layers: `handle`, `head`, `extra`, `mod_<modifier>`. The parts must stay
+  in greyscale (Tinkers colours them per material); the `mod_*` overlays are in colour.
+- To start from the generated textures: `./gradlew runClient -PdumpTextures` writes them all to
+  `run/tconspartan-textures/<weapon>/`. Retouch them with any pixel-art tool (Aseprite, LibreSprite, Krita...),
+  then drop them into `src/main/resources/assets/tconspartan/textures/items/` or into a resource pack.
 
 ## Development
 

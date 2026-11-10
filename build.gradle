@@ -24,6 +24,10 @@ minecraft {
     useDependencyAccessTransformers.set(true)
     username.set('Developer')
     extraRunJvmArguments.addAll(['-ea:' + root_package])
+    // ./gradlew runClient -PdumpTextures : écrit les textures générées dans run/tconspartan-textures/
+    if (project.hasProperty('dumpTextures')) {
+        extraRunJvmArguments.add('-Dtconspartan.dumpTextures=true')
+    }
 }
 
 repositories {
